@@ -1,0 +1,29 @@
+prijava
+iskanje
+vračilo
+dodajanje
+statistika
+
+STATE CHART / DIAGRAM STANJ
+prva stran -> prijava
+->iskanje knjig
+    -iskanje knjig
+
+    -> iskanje ostalo
+        -iskanje ostalo
+
+    -> vračilo
+        -vračilo knjig in ostalega
+
+    -> dodajanje
+        -dodajanje nove knjige
+
+        -> dodajanje ostalega
+            -dodajanje ostalega
+
+    -> statistika
+        -statistika
+
+
+
+<a href="#" class="myButton">green</a>

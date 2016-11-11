@@ -1,80 +1,88 @@
-<!-- IŠČI, Knjige -->
+<!-- IŠČI -->
 
 <!DOCTYPE html>
 <html>
-<header>
-    <div id="navbar">
-        <div id="logo">
-            <img src="dk-logo.png">
-        </div>
-        <div id="navmenu">
-            <a href="profil.html" class="button">Profil</a>
-            <b>|</b>
-            <a href="index.html" class="button">Odjava</a><br>
-        </div>
-    </div>
-</header>
+
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="stil.css">
+    <link rel="stylesheet" type="text/css" href="stil-vse.css">
 </head>
 
 <body>
-    <br>
-    <div id="gumbi">
-        <h1>
-            <a href="isci.html" class="button">IŠČI</a>
-            <b>|</b>
-            <a href="vrni.html" class="button">VRNI</a>
-            <b>|</b>
-            <a href="dodaj.html" class="button">DODAJ</a>
-            <b>|</b>
-            <a href="statistika.html" class="button">STATISTIKA</a><br>
-        </h1>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div id="iskanje">
-        <p>Išči:
-        <input type="text" name="naslov"></p>
+    <header>
+        <div id="navbar">
+            <div id="logotip">
+                <img src="dk-logo.png">
+            </div>
+            <div id="navmenu">
+                <a href="profil.html" class="button">Profil</a>
+                <b>|</b>
+                <a href="index.html" class="button">Odjava</a><br>
+            </div>
+        </div>
+    </header>
+    <div class="centered">
         <br>
-    </div>
-    <br>
-    <div id="tabela">
-        <table>
-          <tr>
-            <th>Avtor</th>
-            <th>Naslov</th>
-            <th>Lokacija</th>
-            <th>Status</th>
-          </tr>
-          <tr>
-            <td>Christie, Agatha</td>
-            <td>A.B.C. Murders</td>
-            <td>1.5.3</td>
-            <td>prosto</td>
-          </tr>
-          <tr>
-            <td>Christie, Agatha</td>
-            <td>Orient express</td>
-            <td>1.5.3</td>
-            <td>prosto</td>
-          </tr>
-          <tr>
-            <td>Rowling, J. K.</td>
-            <td>Harry Potter and the Philosopher's Stone</td>
-            <td>1.5.4</td>
-            <td>prosto</td>
-          </tr>
-          <tr>
-            <td>Rowling, J. K.</td>
-            <td>Harry Potter and the Prisoner of Azkaban</td>
-            <td>1.5.4</td>
-            <td>izposojeno</td>
-          </tr>
-        </table>
+        <div id="gumbi">
+            <h1>
+                <a href="isci.html" class="button">IŠČI</a>
+                <b>|</b>
+                <a href="vrni.html" class="button">VRNI</a>
+                <b>|</b>
+                <a href="dodaj.html" class="button">DODAJ</a>
+                <b>|</b>
+                <a href="statistika.html" class="button">STATISTIKA</a><br>
+            </h1>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <div id="iskanje">
+            <input type="text" class="textfield" name="niz" placeholder="Išči">
+            <br><br>
+        </div>
+        <br>
+        <div id="tabela">
+            <table>
+              <tr>
+                <th>Avtor</th>
+                <th>Naslov</th>
+                <th>Lokacija</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>Christie, Agatha</td>
+                <td>A.B.C. Murders</td>
+                <td>1.5.3</td>
+                <td>prosto</td>
+                  <td><a href="#" class="myButton">IZPOSODI SI</a></td>
+              </tr>
+              <tr>
+                <td>Christie, Agatha</td>
+                <td>Orient express</td>
+                <td>1.5.3</td>
+                <td>prosto</td>
+                  <td><a href="#" class="myButton">IZPOSODI SI</a></td>
+              </tr>
+              <tr>
+                <td>Rowling, J. K.</td>
+                <td>Harry Potter and the Philosopher's Stone</td>
+                <td>1.5.4</td>
+                <td>prosto</td>
+                  <td><a href="#" class="myButton">IZPOSODI SI</a></td>
+              </tr>
+              <tr>
+                <td>Rowling, J. K.</td>
+                <td>Harry Potter and the Prisoner of Azkaban</td>
+                <td>1.5.4</td>
+                <td>izposojeno</td>
+                  <td>Ana Berkopec, 8.9.2016</td>
+              </tr>
+            </table>
+        </div>
     </div>
 </body>
 
