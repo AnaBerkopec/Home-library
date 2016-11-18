@@ -1,0 +1,17 @@
+summary{
+    background-color: #c1ebdd;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+}
+
+details {
+    text-align: left;
+}
+
+h2{
+    color: #478f76;
+}

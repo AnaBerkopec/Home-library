@@ -2,18 +2,7 @@
 
 <!DOCTYPE html>
 <html>
-<header>
-    <div id="navbar">
-        <div id="logo">
-            <img src="dk-logo.png">
-        </div>
-        <div id="navmenu">
-            <a href="profil.html" class="button">Profil</a>
-            <b>|</b>
-            <a href="index.html" class="button">Odjava</a><br>
-        </div>
-    </div>
-</header>
+
 
 <head>
     <meta charset="UTF-8">
@@ -21,35 +10,49 @@
 </head>
 
 <body>
-    <br>
-    <div id="gumbi">
-        <h1>
-            <a href="isci.html" class="button">IŠČI</a>
-            <b>|</b>
-            <a href="vrni.html" class="button">VRNI</a>
-            <b>|</b>
-            <a href="dodaj.html" class="button">DODAJ</a>
-            <b>|</b>
-            <a href="statistika.html" class="button">STATISTIKA</a><br>
-        </h1>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="dk-logo.png">
+            </div>
+            <div id="navmenu">
+                <a href="profil.html" class="button">Profil</a>
+                <b>|</b>
+                <a href="index.html" class="button">Odjava</a>
+            </div>
+        </div>
+    </header>
+    <div class="centered">
+        <div id="gumbi">
+            <h1>
+                <a href="isci.html" class="button">IŠČI</a>
+                <b>|</b>
+                <a href="vrni.html" class="button">VRNI</a>
+                <b>|</b>
+                <a href="dodaj.html" class="chosen-button">DODAJ</a>
+                <b>|</b>
+                <a href="statistika.html" class="button">STATISTIKA</a>
+            </h1>
+        </div>
+        <div id="vpisi">
+            <label>Avtor:</label>
+            <input type="text" class="middle-textfield" name="avtor-ime" placeholder="Ime">
+            <input type="text" class="middle-textfield" name="avtor-priimek" placeholder="Priimek">
+            <br>
+            <label>Naslov:</label>
+            <input type="text" class="textfield" name="naslov" placeholder="Naslov">
+            <br>
+            <label>Lokacija:</label>
+            <input type="text" class="small-textfield" name="lokacija" placeholder="Nadstropje"> .
+            <input type="text" class="small-textfield" name="lokacija" placeholder="Omara"> .
+            <input type="text" class="small-textfield" name="lokacija" placeholder="Polica">
+            <br>
+        </div>
+        <td><a href="#" class="myButton">DODAJ</a></td>
     </div>
-    <br>
-    <br>
-    <br>
-    <div id="vpisi">
-        <input type="text" class="textfield" name="avtor" placeholder="Avtor">
-        <br><br>
-        <input type="text" class="textfield" name="naslov" placeholder="Naslov">
-        <br><br>
-        <input type="text" class="textfield" name="lokacija" placeholder="Lokacija">
-        <br>
-    </div>
-    <br>
-    <td><a href="#" class="myButton">DODAJ</a></td>
 </body>
 
 <footer>
-    <br>
     <a href="admin.html" class="button">admin</a>
     <b>|</b>
     <a href="isci.html" class="button">išči</a>
@@ -62,6 +65,6 @@
     <b>|</b>
     <a href="profil.html" class="button">profil</a>
     <b>|</b>
-    <a href="index.html" class="button">odjava</a><br>
+    <a href="index.html" class="button">odjava</a>
 </footer>
 </html>

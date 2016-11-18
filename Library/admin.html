@@ -2,65 +2,61 @@
 
 <!DOCTYPE html>
 <html>
-<header>
-    <div id="navbar">
-        <div id="logo">
-            <img src="dk-logo.png">
-        </div>
-        <div id="navmenu">
-            <a href="profil.html" class="button">Profil</a>
-            <b>|</b>
-            <a href="index.html" class="button">Odjava</a><br>
-        </div>
-    </div>
-</header>
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="stil-vse.css">
+    <link rel="stylesheet" type="text/css" href="stil-admin.css">
 </head>
 
 <body>
-    <br>
-    <div id="gumbi">
-        <h1>
-            <a href="isci.html" class="button">IŠČI</a>
-            <b>|</b>
-            <a href="vrni.html" class="button">VRNI</a>
-            <b>|</b>
-            <a href="dodaj.html" class="button">DODAJ</a>
-            <b>|</b>
-            <a href="statistika.html" class="button">STATISTIKA</a><br>
-        </h1>
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="dk-logo.png">
+            </div>
+            <div id="navmenu">
+                <a href="profil.html" class="button">Profil</a>
+                <b>|</b>
+                <a href="index.html" class="button">Odjava</a><br>
+            </div>
+        </div>
+    </header>
+    <div class="centered">
+        <div id="gumbi">
+            <h1>
+                <a href="isci.html" class="button">IŠČI</a>
+                <b>|</b>
+                <a href="vrni.html" class="button">VRNI</a>
+                <b>|</b>
+                <a href="dodaj.html" class="button">DODAJ</a>
+                <b>|</b>
+                <a href="statistika.html" class="button">STATISTIKA</a>
+            </h1>
+        </div>
+        <div id="uporabnik">
+            <h3>DODAJ UPORABNIKA</h3>
+            <div class="men">
+                <div id="vpisi">
+                    <input type="text" class="textfield" name="username" placeholder="Uporabniško ime"><br>
+                    <input type="text" class="textfield space" name="password" placeholder="Geslo">
+                </div>
+                <a href="#" class="myButton">DODAJ</a>
+            </div>
+        </div>
+        <div id="lokacija">
+            <h3>DODAJ LOKACIJO</h3>
+            <div class="men">
+                <div id="lok">
+                    <input type="text" class="textfield space" name="username" placeholder="Lokacija">
+                </div>
+                <a href="#" class="myButton">DODAJ</a>
+            </div>
+        </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <h2>DODAJ UPORABNIKA</h2>
-    <br>
-    <div id="vpisi">
-        <input type="text" class="textfield" name="username" placeholder="Uporabniško ime">
-        <br><br>
-        <input type="text" class="textfield" name="password" placeholder="Geslo">
-        <br>
-    </div>
-    <br>
-    <a href="#" class="myButton">DODAJ</a>
-    <br><br>
-    <br><br>
-    <h2>DODAJ LOKACIJO</h2>
-    <br>
-    <div id="lokacija">
-        <input type="text" class="textfield" name="username" placeholder="Lokacija">
-        <br>
-    </div>
-    <br>
-    <a href="#" class="myButton">DODAJ</a>
-    <br>
 </body>
 
 <footer>
-    <br>
     <a href="admin.html" class="button">admin</a>
     <b>|</b>
     <a href="isci.html" class="button">išči</a>
@@ -73,6 +69,6 @@
     <b>|</b>
     <a href="profil.html" class="button">profil</a>
     <b>|</b>
-    <a href="index.html" class="button">odjava</a><br>
+    <a href="index.html" class="button">odjava</a>
 </footer>
 </html>
