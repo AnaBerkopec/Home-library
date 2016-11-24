@@ -1,0 +1,42 @@
+h3 {
+    color: #478f76;
+    font-size: 150%;
+}
+
+div #uporabnik {
+    float: left;
+    margin-bottom: 50px;
+}
+
+div #lokacija {
+    float:right;
+}
+
+.levo {
+    float:left;
+    width:45%;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.desno {
+    float:left;
+    width:45%;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+.textfield {
+    height: 2em;
+    width: 20em;
+    -moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	background-color: #d1f0e5;
+}
+.space {
+    margin-bottom: 10px;
+}
+.men {
+    padding-top: 20px;
+}

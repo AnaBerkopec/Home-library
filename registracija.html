@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stil-vse.css">
+    <link rel="stylesheet" type="text/css" href="stil-registracija.css">
+    <title>BK | REGISTRACIJA</title>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logotip">
+                <img src="dk-logo.png">
+            </div>
+        </div>
+    </header>
+    <div id="registracija">
+        <h2>REGISTRACIJA</h2>
+        <div id="levo">
+            <p>Ime:</p><br>
+            <p class="marg">Priimek:</p><br>
+            <p class="marg">Uporabniško ime:</p><br>
+            <p class="marg">E-mail:</p><br>
+            <p class="marg">Telefonska številka:</p><br>
+        </div>
+        <form id="desno">
+            <input type="text" class="textfield space" name="ime" placeholder="Ime"
+                       title="Tvoje ime" oninvalid="setCustomValidity('Vpiši svoje ime')"
+                       required><br>
+            <input type="text" class="textfield space" name="priimek" placeholder="Priimek"
+                       title="Tvoj priimek" oninvalid="setCustomValidity('Vpiši svoj priimek')"
+                       required><br>
+            <input type="text" class="textfield space" name="username1" placeholder="Uporabniško ime"
+                       title="Tvoje uporabniško ime" oninvalid="setCustomValidity('Izberi si uporabniško ime')"
+                       required><br>
+            <input type="email" class="textfield space" name="mail" placeholder="Email naslov"
+                       title="Tvoje email naslov" oninvalid="setCustomValidity('Vpiši svoj e-mail naslov')"
+                       required><br>
+            <input type="text" class="textfield space" name="phone" placeholder="Telefonska številka"
+                       title="Tvoja telefonska številka" oninvalid="setCustomValidity('Vpiši svojo telefonsko številko')"
+                       required><br>
+            <input type="submit" class=myButton value="REGISTRACIJA">
+        </form>
+
+        <a href="index.html" id="reg">Si že registriran? Prijavi se tukaj.</a>
+    </div>
+</body>
+</html>
