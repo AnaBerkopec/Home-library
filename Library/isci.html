@@ -6,6 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="stil-vse.css">
+    <link rel="stylesheet" type="text/css" href="stil-isci.css">
+    <script src="js-isci.js"></script>
+    <title>BK | IŠČI</title>
 </head>
 
 <body>
@@ -35,7 +38,8 @@
         </div>
 
         <div id="iskanje">
-            <input type="text" class="textfield" name="niz" placeholder="Išči">
+            <label>Išči: </label>
+            <input type="text" class="textfield" name="niz" placeholder="Vnesi iskani niz">
         </div>
         <div id="tabela">
             <table>
@@ -51,21 +55,21 @@
                 <td>A.B.C. Murders</td>
                 <td>1.5.3</td>
                 <td>prosto</td>
-                  <td><a href="#" class="myButton">IZPOSODI SI</a></td>
+                  <td><a href="#" class="myButton" onclick="izposoja()">IZPOSODI SI</a></td>
               </tr>
               <tr>
                 <td>Christie, Agatha</td>
                 <td>Orient express</td>
                 <td>1.5.3</td>
                 <td>prosto</td>
-                  <td><a href="#" class="myButton">IZPOSODI SI</a></td>
+                  <td><a href="#" class="myButton" onclick="izposoja()">IZPOSODI SI</a></td>
               </tr>
               <tr>
                 <td>Rowling, J. K.</td>
                 <td>Harry Potter and the Philosopher's Stone</td>
                 <td>1.5.4</td>
                 <td>prosto</td>
-                  <td><a href="#" class="myButton">IZPOSODI SI</a></td>
+                  <td><a href="#" class="myButton" onclick="izposoja()">IZPOSODI SI</a></td>
               </tr>
               <tr>
                 <td>Rowling, J. K.</td>
@@ -79,39 +83,27 @@
                 <td>A.B.C. Murders</td>
                 <td>1.5.3</td>
                 <td>prosto</td>
-                  <td><a href="#" class="myButton">IZPOSODI SI</a></td>
+                  <td><a href="#" class="myButton" onclick="izposoja()">IZPOSODI SI</a></td>
               </tr>
               <tr>
                 <td>Christie, Agatha</td>
                 <td>Orient express</td>
                 <td>1.5.3</td>
                 <td>prosto</td>
-                  <td><a href="#" class="myButton">IZPOSODI SI</a></td>
+                  <td><a href="#" class="myButton" onclick="izposoja()">IZPOSODI SI</a></td>
               </tr>
-              <tr>
-                <td>Rowling, J. K.</td>
-                <td>Harry Potter and the Philosopher's Stone</td>
-                <td>1.5.4</td>
-                <td>prosto</td>
-                  <td><a href="#" class="myButton">IZPOSODI SI</a></td>
-              </tr>
-              <tr>
-                <td>Rowling, J. K.</td>
-                <td>Harry Potter and the Prisoner of Azkaban</td>
-                <td>1.5.4</td>
-                <td>izposojeno</td>
-                  <td>Ana Berkopec, 8.9.2016</td>
+              
               </tr>
             </table>
         </div>
         <div id="strani-tabele">
-            <a href="#" class="button"> < </a>
-            <a href="#" class="chosen-button">1</a>
-            <a href="#" class="button">2</a>
-            <a href="#" class="button">3</a>
-            <a href="#" class="button">4</a>
-            <a href="#" class="button">5</a>
-            <a href="#" class="button"> > </a>
+            <ul class="pagination">
+                <li><a href="#">«</a></li>
+                <li><a class="active" href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">»</a></li>
+                </ul>
         </div>
     </div>
 </body>

@@ -5,21 +5,30 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="stil-vse.css">
     <link rel="stylesheet" type="text/css" href="stil-prijava.css">
-    <title>Prijava</title>
+    <title>BK | PRIJAVA</title>
 </head>
 
 <body>
     <header>
         <div id="navbar">
-            <div id="logotip">
-                <img src="dk-logo.png">
-            </div>
+            <div id="logotip"> <img src="dk-logo.png"> </div>
         </div>
     </header>
     <div id="prijava">
-        <input type="text" class="textfield" name="username" placeholder="Uporabniško ime"><br><br>
-        <input type="text" class="textfield" name="password" placeholder="Geslo"><br><br>
-        <a href="isci.html" class="myButton">PRIJAVA</a>
+        <div>
+            <form id="login" action="isci.html">
+                <label>Uporabniško ime:</label>
+                <br>
+                <input type="text" class="textfield" name="username" required>
+                <br>
+                <label>Geslo:</label>
+                <br>
+                <input type="text" class="textfield" name="password" required>
+                <br>
+                <input type="submit" href="isci.html" class=myButton value="PRIJAVA"> 
+            </form>
+            <br> <a href="registracija.html" id="reg">Še nisi prijavljen? Registriraj se tukaj.</a> </div>
     </div>
 </body>
+
 </html>

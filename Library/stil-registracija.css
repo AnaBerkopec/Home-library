@@ -1,0 +1,77 @@
+header {
+    padding-bottom: 60px;
+}
+.text {
+    height: 40px;
+}
+
+.textfield {
+    height: 2em;
+    width: 20em;
+    -moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	background-color: #d1f0e5;
+}
+
+.space {
+    margin-bottom: 15px;
+}
+
+div #reg {
+  text-decoration: underline;
+  color: black;
+  font-size: 80%;
+}
+
+h2 {
+    color: #478f76;
+    font-size: 200%;
+    margin-bottom: 20px;
+}
+
+div #registr {
+    text-align: right;
+    margin-top: 5px;
+}
+
+#registracija #register #form #gumbR {
+   padding-right: 200px;
+}
+
+.marg {
+    margin-top: 12.5px;
+}
+
+body {
+    background-color: #daf3ea;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+#registracija {
+    height: 90%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+#register {
+    max-width: 800px;
+    min-width: 250px;
+    padding: 20px 20px 20px 20px;
+    background-color: #66cdaa;
+    text-align: center;
+}
+
+#gumb1 {
+    margin-top: 10px;
+    margin-bottom:10px;
+}

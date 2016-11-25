@@ -1,25 +1,20 @@
 <!-- DODAJ, Knjige -->
-
 <!DOCTYPE html>
 <html>
-
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="stil-vse.css">
+    <link rel="stylesheet" type="text/css" href="stil-dodaj.css">
+    <script src="js-validateForm.js"></script>
+    <title>BK | DODAJ</title>
 </head>
 
 <body>
     <header>
         <div id="navbar">
-            <div id="logo">
-                <img src="dk-logo.png">
-            </div>
-            <div id="navmenu">
-                <a href="profil.html" class="button">Profil</a>
-                <b>|</b>
-                <a href="index.html" class="button">Odjava</a>
-            </div>
+            <div id="logo"> <img src="dk-logo.png"> </div>
+            <div id="navmenu"> <a href="profil.html" class="button">Profil</a> <b>|</b> <a href="index.html" class="button">Odjava</a> </div>
         </div>
     </header>
     <div class="centered">
@@ -32,39 +27,41 @@
                 <a href="dodaj.html" class="chosen-button">DODAJ</a>
                 <b>|</b>
                 <a href="statistika.html" class="button">STATISTIKA</a>
-            </h1>
+            </h1> </div>
+        <div id="dodaj">
+            <form name="novForm" onsubmit="return validateForm()" method="post">
+                <label>Avtor(ji):</label>
+                <input type="text" class="textfield space" name="avtorji" placeholder="Ime in priimek avtorja" title="Avtor(ji) knjige" required>
+                <br>
+                <label class="marg"> Naslov:</label>
+                <input type="text" class="textfield space" name="naslov" placeholder="Naslov" title="Naslov knjige" required>
+                <br>
+                <label class="marg">Lokacija:</label>
+                <select class="small-dropdown" title="Nadstropje">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select> .
+                <select class="small-dropdown" title="Omara">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select> .
+                <select class="small-dropdown" title="Polica">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <br>
+                <input type="submit" class=myButton value="DODAJ"> </form>
         </div>
-        <div id="vpisi">
-            <label>Avtor:</label>
-            <input type="text" class="middle-textfield" name="avtor-ime" placeholder="Ime">
-            <input type="text" class="middle-textfield" name="avtor-priimek" placeholder="Priimek">
-            <br>
-            <label>Naslov:</label>
-            <input type="text" class="textfield" name="naslov" placeholder="Naslov">
-            <br>
-            <label>Lokacija:</label>
-            <input type="text" class="small-textfield" name="lokacija" placeholder="Nadstropje"> .
-            <input type="text" class="small-textfield" name="lokacija" placeholder="Omara"> .
-            <input type="text" class="small-textfield" name="lokacija" placeholder="Polica">
-            <br>
-        </div>
-        <td><a href="#" class="myButton">DODAJ</a></td>
     </div>
 </body>
+<footer> <a href="admin.html" class="button">admin</a> <b>|</b> <a href="isci.html" class="button">išči</a> <b>|</b> <a href="vrni.html" class="button">vrni</a> <b>|</b> <a href="dodaj.html" class="button">dodaj</a> <b>|</b> <a href="statistika.html" class="button">statistika</a> <b>|</b> <a href="profil.html" class="button">profil</a> <b>|</b> <a href="index.html" class="button">odjava</a> </footer>
 
-<footer>
-    <a href="admin.html" class="button">admin</a>
-    <b>|</b>
-    <a href="isci.html" class="button">išči</a>
-    <b>|</b>
-    <a href="vrni.html" class="button">vrni</a>
-    <b>|</b>
-    <a href="dodaj.html" class="button">dodaj</a>
-    <b>|</b>
-    <a href="statistika.html" class="button">statistika</a>
-    <b>|</b>
-    <a href="profil.html" class="button">profil</a>
-    <b>|</b>
-    <a href="index.html" class="button">odjava</a>
-</footer>
 </html>
