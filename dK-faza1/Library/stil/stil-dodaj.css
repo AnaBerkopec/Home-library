@@ -1,0 +1,45 @@
+.dodaj {
+    width: 52%;
+    text-align: center;
+    background-color: #eee;
+    border: 2px groove #d1f0e5;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: 0.3s;
+}
+
+.textfield {
+    height: 2em;
+    width: 30em;
+    border-radius: 4px;
+    background-color: #d1f0e5;
+}
+
+.space {
+    margin-bottom: 10px;
+}
+
+.marg {
+    margin-top: 15px;
+}
+
+.small-dropdown {
+    height: 2em;
+    width: 3em;
+    border-radius: 4px;
+    background-color: #d1f0e5;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+    .textfield {
+        width: 100%;
+    }
+    
+    .dodaj {
+        width: 80%;
+        padding: 10px 10px 10px 10px;
+        min-width: 230px;
+    } 
+}

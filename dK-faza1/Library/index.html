@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stil/stil-vse.css">
+    <link rel="stylesheet" type="text/css" href="stil/stil-prijava.css">
+    <title>DK | PRIJAVA</title>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+            <img src="slike/dk-logo.png" alt="dK">
+        </div>
+    </header>
+    <div class="prijava">
+        <div>
+            <form action="isci.html">
+                <label>Uporabniško ime:</label>
+                <br>
+                <input type="text" class="textfield" name="username" required>
+                <br>
+                <label>Geslo:</label>
+                <br>
+                <input type="password" class="textfield" name="password" title="Geslo mora imeti vsaj 6 znakov" pattern="^\S{6,}$" required>
+                <br>
+                <input type="submit" data-href="isci.html" class=myButton value="PRIJAVA"> </form>
+            <br> <a href="registracija.html" class="reg">Še nisi prijavljen? Registriraj se tukaj.</a> </div>
+    </div>
+</body>
+
+</html>

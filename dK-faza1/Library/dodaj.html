@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stil/stil-vse.css">
+    <link rel="stylesheet" type="text/css" href="stil/stil-dodaj.css">
+    <script src="js/js-vse.js"></script>
+    <title>DK | DODAJ</title>
+</head>
+
+<body>
+    <header>
+        <div id="navbar"> <img src="slike/dk-logo.png" alt="dK">
+            <div id="navmenu">
+                <div class="po"> <a href="profil.html" class="button">Profil</a> <b>|</b> <a href="index.html" class="button" onclick="return odjava()">Odjava</a> </div>
+            </div>
+            <div class="naslov">
+                <label>DODAJ</label>
+            </div>
+            <div class="burger"> <a class="burgerLink" href="javascript:void(0);" onclick="openNav()">☰</a> </div>
+        </div>
+    </header>
+    <div id="mySidenav" class="sidenav"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <a href="isci.html">IŠČI</a> <a href="vrni.html">VRNI</a> <a href="dodaj.html">DODAJ</a> <a href="statistika.html">STATISTIKA</a> <a href="profil.html">PROFIL</a> <a href="admin.html">ADMIN</a> <a href="index.html">ODJAVA</a> </div>
+    <div class="centered">
+        <div class="gumbi">
+            <h1>
+                <a href="isci.html" class="button">IŠČI</a>
+                <b>|</b>
+                <a href="vrni.html" class="button">VRNI</a>
+                <b>|</b>
+                <a href="dodaj.html" class="chosen-button">DODAJ</a>
+                <b>|</b>
+                <a href="statistika.html" class="button">STATISTIKA</a>
+            </h1> </div>
+        <div class="dodaj">
+            <form name="novForm">
+                <label>Avtor(ji):</label>
+                <input type="text" class="textfield space" name="avtorji" placeholder="Ime in priimek avtorja" title="Avtor(ji) knjige" required>
+                <br>
+                <label class="marg"> Naslov:</label>
+                <input type="text" class="textfield space" name="naslov" placeholder="Naslov" title="Naslov knjige" required>
+                <br>
+                <label class="marg">Lokacija:</label>
+                <select class="small-dropdown" title="Nadstropje">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select> .
+                <select class="small-dropdown" title="Omara">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select> .
+                <select class="small-dropdown" title="Polica">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <br>
+                <input type="submit" class=myButton value="DODAJ"> </form>
+        </div>
+    </div>
+    <footer> <a href="admin.html" class="button">admin</a> <b>|</b> <a href="isci.html" class="button">išči</a> <b>|</b> <a href="vrni.html" class="button">vrni</a> <b>|</b> <a href="dodaj.html" class="button">dodaj</a> <b>|</b> <a href="statistika.html" class="button">statistika</a> <b>|</b> <a href="profil.html" class="button">profil</a> <b>|</b> <a href="index.html" class="button" onclick="return odjava()">odjava</a> </footer>
+</body>
+
+</html>

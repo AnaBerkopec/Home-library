@@ -1,0 +1,71 @@
+header {
+    padding-bottom: 60px;
+}
+
+.textfield {
+    height: 2em;
+    width: 20em;
+    border-radius: 4px;
+    background-color: #d1f0e5;
+}
+
+.space {
+    margin-bottom: 15px;
+}
+
+.prijava {
+    text-decoration: underline;
+    color: black;
+}
+
+h2 {
+    color: #478f76;
+    font-size: 200%;
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: right;
+    margin-top: 5px;
+}
+
+.marg {
+    margin-top: 12.5px;
+}
+
+body {
+    background-color: #daf3ea;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.registracija {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register {
+    padding: 20px 20px 20px 20px;
+    background-color: #66cdaa;
+    text-align: center;
+}
+
+#gumb1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 490px) {
+    .textfield {
+        width: 100%;
+    }
+    label {
+        float: left;
+    }
+}
