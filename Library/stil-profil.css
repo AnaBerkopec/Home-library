@@ -1,10 +1,9 @@
 .textfield {
     height: 2em;
     width: 20em;
-    -moz-border-radius:4px;
-	-webkit-border-radius:4px;
 	border-radius:4px;
 	background-color: #d1f0e5;
+    transition: 0.3s;
 }
 
 .space {
@@ -13,6 +12,7 @@
 .space2 {
     margin-bottom: 20px;
 }
+
 .menjaj {
     padding-top: 20px;
 }
@@ -21,39 +21,39 @@ h2 {
     color: #478f76;
     font-size: 200%;
 }
+
 h3 {
     color: #478f76;
     font-size: 120%;
     text-align: center;
 }
+
 html,
 body {
     height: 100%;
     margin: 0;
 }
 
-#wrapper {
+.wrapper {
     height: 100%;
-    display: -webkit-flex;
     display: flex;
-    -webkit-align-items: center;
     align-items: center;
-    -webkit-justify-content: space-around;
     justify-content: space-around;
-    -webkit-flex-flow: row wrap;
-    
+    flex-flow: row wrap;
 }
 
-#usernameM {
+.usernameM {
     padding: 10px 10px 10px 10px;
     text-align: right;
     margin-top: 25px;
+    transition: 0.3s;
 }
 
-#passwordM {
+.passwordM {
     padding: 10px 10px 10px 10px;
     text-align: right;
     margin-top: 25px;
+    transition: 0.3s;
 }
 
 @media (max-width: 800px) {

@@ -2,29 +2,18 @@ header {
     padding-bottom: 60px;
 }
 
-.text {
-    height: 40px;
-}
-
 .textfield {
     height: 2em;
-    width: 20em;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
+    width: 100%;
     border-radius: 4px;
     background-color: #d1f0e5;
     margin-bottom: 20px;
     margin-top: 5px;
 }
 
-.space {
-    margin-bottom: 20px;
-}
-
-div #reg {
+.reg {
     text-decoration: underline;
     color: black;
-    font-size: 80%;
 }
 
 body {
@@ -37,20 +26,19 @@ body {
     margin: 0;
 }
 
-#prijava {
+.prijava {
     height: 100%;
-    display: -webkit-flex;
     display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
 }
 
-#login {
-    max-width: 300px;
-    min-width: 250px;
+form {
     padding: 25px 25px 25px 25px;
     background-color: #66cdaa;
     text-align: center;
+}
+
+@media (max-width: 490px) {
+    #prijava {
+        height: 30%
+    }
 }

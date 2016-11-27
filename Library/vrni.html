@@ -1,30 +1,30 @@
-<!-- VRNI -->
-
 <!DOCTYPE html>
 <html>
-
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="stil-vse.css">
     <link rel="stylesheet" type="text/css" href="stil-isci.css">
+    <script src="js-vse.js"></script>
+    <title>DK | VRNI</title>
 </head>
 
 <body>
     <header>
         <div id="navbar">
-            <div id="logo">
-                <img src="dk-logo.png">
-            </div>
+            <img src="dk-logo.png" alt="dK">
             <div id="navmenu">
-                <a href="profil.html" class="button">Profil</a>
-                <b>|</b>
-                <a href="index.html" class="button">Odjava</a>
+                <div class="po"> <a href="profil.html" class="button">Profil</a> <b>|</b> <a href="index.html" class="button" onclick="return odjava()">Odjava</a> </div>
             </div>
+            <div class="naslov">
+                <label>VRNI</label>
+            </div>
+            <div class="burger"> <a class="burgerLink" href="javascript:void(0);" onclick="openNav()">☰</a> </div>
         </div>
     </header>
-    <div class="centered wrapper">
-        <div id="gumbi">
+    <div id="mySidenav" class="sidenav"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <a href="isci.html">IŠČI</a> <a href="vrni.html">VRNI</a> <a href="dodaj.html">DODAJ</a> <a href="statistika.html">STATISTIKA</a> <a href="profil.html">PROFIL</a> <a href="admin.html">ADMIN</a> <a href="index.html">ODJAVA</a> </div>
+    <div class="centered">
+        <div class="gumbi">
             <h1>
                 <a href="isci.html" class="button">IŠČI</a>
                 <b>|</b>
@@ -33,58 +33,48 @@
                 <a href="dodaj.html" class="button">DODAJ</a>
                 <b>|</b>
                 <a href="statistika.html" class="button">STATISTIKA</a>
-            </h1>
-        </div>
-        <div id="tabela">
+            </h1> </div>
             <table>
-              <tr>
-                <th>Avtor</th>
-                <th>Naslov</th>
-                <th>Izposojeno</th>
-                <th>Lokacija</th>
-                  <th></th>
-              </tr>
-              <tr>
-                <td>Christie, Agatha</td>
-                <td>A.B.C. Murders</td>
-                <td>8.9.2016</td>
-                <td>1.5.3</td>
-                  <td><a href="#" class="myButton">VRNI</a></td>
-              </tr>
-              <tr>
-                <td>Christie, Agatha</td>
-                <td>Orient Express</td>
-                <td>8.9.2016</td>
-                <td>1.5.3</td>
-                  <td><a href="#" class="myButton">VRNI</a></td>
-              </tr>
-              <tr>
-                <td>Rowling, J. K.</td>
-                <td>Harry Potter and the Prisoner of Azkaban</td>
-                <td>15.10.2016</td>
-                <td>1.5.4</td>
-                  <td><a href="#" class="myButton">VRNI</a></td>
-              </tr>
+                <thead>
+                    <tr>
+                        <th>Avtor</th>
+                        <th>Naslov</th>
+                        <th>Izposojeno</th>
+                        <th>Lokacija</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Christie, Agatha</td>
+                        <td>A.B.C. Murders</td>
+                        <td>8.9.2016</td>
+                        <td>1.5.3</td>
+                        <td><a href="#" class="myButton">VRNI</a></td>
+                    </tr>
+                    <tr>
+                        <td>Christie, Agatha</td>
+                        <td>Orient Express</td>
+                        <td>8.9.2016</td>
+                        <td>1.5.3</td>
+                        <td><a href="#" class="myButton">VRNI</a></td>
+                    </tr>
+                    <tr>
+                        <td>Rowling, J. K.</td>
+                        <td>Harry Potter and the Prisoner of Azkaban</td>
+                        <td>15.10.2016</td>
+                        <td>1.5.4</td>
+                        <td><a href="#" class="myButton">VRNI</a></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5"><a href="#" class="myButton">VRNI VSE</a></td>
+                    </tr>
+                </tfoot>
             </table>
-        </div>
-        <a href="#" class="myButton">VRNI VSE</a>
     </div>
-    <footer>
-        <a href="admin.html" class="button">admin</a>
-        <b>|</b>
-        <a href="isci.html" class="button">išči</a>
-        <b>|</b>
-        <a href="vrni.html" class="button">vrni</a>
-        <b>|</b>
-        <a href="dodaj.html" class="button">dodaj</a>
-        <b>|</b>
-        <a href="statistika.html" class="button">statistika</a>
-        <b>|</b>
-        <a href="profil.html" class="button">profil</a>
-        <b>|</b>
-        <a href="index.html" class="button">odjava</a>
-    </footer>
+    <footer> <a href="admin.html" class="button">admin</a> <b>|</b> <a href="isci.html" class="button">išči</a> <b>|</b> <a href="vrni.html" class="button">vrni</a> <b>|</b> <a href="dodaj.html" class="button">dodaj</a> <b>|</b> <a href="statistika.html" class="button">statistika</a> <b>|</b> <a href="profil.html" class="button">profil</a> <b>|</b> <a href="index.html" class="button" onclick="return odjava()">odjava</a> </footer>
 </body>
-
 
 </html>

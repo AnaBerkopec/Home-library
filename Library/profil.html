@@ -1,4 +1,3 @@
-<!-- PROFIL -->
 <!DOCTYPE html>
 <html>
 
@@ -6,19 +5,27 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="stil-vse.css">
     <link rel="stylesheet" type="text/css" href="stil-profil.css">
-    <!--<script src="js-profil.js"></script>-->
-    <title>BK | PROFIL</title>
+    <script src="js-vse.js"></script>
+    <script src="js-profil.js"></script>
+    <title>DK | PROFIL</title>
 </head>
 
 <body>
     <header>
         <div id="navbar">
-            <div id="logo"> <img src="dk-logo.png"> </div>
-            <div id="navmenu"> <a href="profil.html" class="button">Profil</a> <b>|</b> <a href="index.html" class="button">Odjava</a> </div>
+            <img src="dk-logo.png" alt="dK">
+            <div id="navmenu">
+                <div class="po"> <a href="profil.html" class="button">Profil</a> <b>|</b> <a href="index.html" class="button" onclick="return odjava()">Odjava</a> </div>
+            </div>
+            <div class="naslov">
+                <label>PROFIL</label>
+            </div>
+            <div class="burger"> <a class="burgerLink" href="javascript:void(0);" onclick="openNav()">☰</a> </div>
         </div>
     </header>
+    <div id="mySidenav" class="sidenav"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <a href="isci.html">IŠČI</a> <a href="vrni.html">VRNI</a> <a href="dodaj.html">DODAJ</a> <a href="statistika.html">STATISTIKA</a> <a href="profil.html">PROFIL</a> <a href="admin.html">ADMIN</a> <a href="index.html">ODJAVA</a> </div>
     <div class="centered">
-        <div id="gumbi">
+        <div class="gumbi">
             <h1>
                 <a href="isci.html" class="button">IŠČI</a>
                 <b>|</b>
@@ -29,33 +36,32 @@
                 <a href="statistika.html" class="button">STATISTIKA</a>
             </h1> </div>
         <h2> ANA BERKOPEC </h2>
-        <div id="wrapper">
-            <div id=usernameM>
+        <div class="wrapper">
+            <div class=usernameM>
                 <h3>ZAMENJAJ UPORABNIŠKO IME</h3>
                 <form class="menjaj">
                     <label>Novo uporabniško ime:</label>
-                    <input type="text" class="textfield space2" name="newusername" placeholder="Novo uporabniško ime" title="Novo uporabniško ime" oninvalid="setCustomValidity('Vpiši novo uporabniško ime')" required>
+                    <input type="text" class="textfield space2" name="newusername" placeholder="Novo uporabniško ime" title="Uporabniško ime mora biti dolgo vsaj 5 znakov" pattern=".{5,}" required>
                     <br>
                     <input type="submit" class=myButton value="ZAMENJAJ UPORABNIŠKO IME"> </form>
             </div>
-            <div id="passwordM">
+            <div class="passwordM">
                 <h3>ZAMENJAJ GESLO</h3>
-                <form class="menjaj">
+                <form onsubmit="return check(this);" class="menjaj" method="post">
                     <label>Sedanje geslo:</label>
-                    <input type="text" class="textfield space" name="oldpassword" placeholder="Staro geslo" title="Staro geslo" oninvalid="setCustomValidity('Vpiši sedanje geslo')" required>
+                    <input type="password" class="textfield space" id="oldpassword" placeholder="Staro geslo" title="Geslo mora imeti vsaj 6 znakov" pattern="^\S{6,}$" required>
                     <br>
                     <label>Novo geslo:</label>
-                    <input type="text" class="textfield space" name="newpassword" placeholder="Novo geslo" title="Novo geslo" oninvalid="setCustomValidity('Vpiši novo geslo')" required>
+                    <input type="password" class="textfield space" id="newpassword1" placeholder="Novo geslo" title="Geslo mora imeti vsaj 6 znakov" pattern="^\S{6,}$" required>
                     <br>
                     <label>Ponovi novo geslo:</label>
-                    <input type="text" class="textfield space" name="newpassword" placeholder="Ponovi novo geslo" title="Novo geslo" oninvalid="setCustomValidity('Vpiši novo geslo')" required>
+                    <input type="password" class="textfield space" id="newpassword2" placeholder="Ponovi novo geslo" title="Geslo mora imeti vsaj 6 znakov" pattern="^\S{6,}$" required>
                     <br>
                     <input type="submit" class=myButton value="ZAMENJAJ GESLO"> </form>
             </div>
         </div>
     </div>
-    </div>
+    <footer> <a href="admin.html" class="button">admin</a> <b>|</b> <a href="isci.html" class="button">išči</a> <b>|</b> <a href="vrni.html" class="button">vrni</a> <b>|</b> <a href="dodaj.html" class="button">dodaj</a> <b>|</b> <a href="statistika.html" class="button">statistika</a> <b>|</b> <a href="profil.html" class="button">profil</a> <b>|</b> <a href="index.html" class="button" onclick="return odjava()">odjava</a> </footer>
 </body>
-<footer> <a href="admin.html" class="button">admin</a> <b>|</b> <a href="isci.html" class="button">išči</a> <b>|</b> <a href="vrni.html" class="button">vrni</a> <b>|</b> <a href="dodaj.html" class="button">dodaj</a> <b>|</b> <a href="statistika.html" class="button">statistika</a> <b>|</b> <a href="profil.html" class="button">profil</a> <b>|</b> <a href="index.html" class="button">odjava</a> </footer>
 
 </html>

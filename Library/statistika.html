@@ -1,31 +1,29 @@
-<!-- STATISTIKA -->
-
 <!DOCTYPE html>
 <html>
-
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="stil-vse.css">
     <link rel="stylesheet" type="text/css" href="stil-statistika.css">
-    <title>BK | STATISTIKA</title>
+    <script src="js-vse.js"></script>
+    <title>DK | STATISTIKA</title>
 </head>
 
 <body>
     <header>
-        <div id="navbar">
-            <div id="logo">
-                <img src="dk-logo.png">
-            </div>
+        <div id="navbar"> <img src="dk-logo.png" alt="dK">
             <div id="navmenu">
-                <a href="profil.html" class="button">Profil</a>
-                <b>|</b>
-                <a href="index.html" class="button">Odjava</a>
+                <div class="po"> <a href="profil.html" class="button">Profil</a> <b>|</b> <a href="index.html" class="button" onclick="return odjava()">Odjava</a> </div>
             </div>
+            <div class="naslov">
+                <label>STATISTIKA</label>
+            </div>
+            <div class="burger"> <a class="burgerLink" href="javascript:void(0);" onclick="openNav()">☰</a> </div>
         </div>
     </header>
+    <div id="mySidenav" class="sidenav"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <a href="isci.html">IŠČI</a> <a href="vrni.html">VRNI</a> <a href="dodaj.html">DODAJ</a> <a href="statistika.html">STATISTIKA</a> <a href="profil.html">PROFIL</a> <a href="admin.html">ADMIN</a> <a href="index.html">ODJAVA</a> </div>
     <div class="centered">
-        <div id="gumbi">
+        <div class="gumbi">
             <h1>
                 <a href="isci.html" class="button">IŠČI</a>
                 <b>|</b>
@@ -34,60 +32,47 @@
                 <a href="dodaj.html" class="button">DODAJ</a>
                 <b>|</b>
                 <a href="statistika.html" class="chosen-button">STATISTIKA</a>
-            </h1>
+            </h1> </div>
+        <div class="deli">
+            <details>
+                <summary>TRENUTNO IZPOSOJENE KNJIGE</summary>
+                <ul>
+                    <li>Christie, A.: A.B.C. Murders</li>
+                    <li>Christie, A.: Orient Express</li>
+                    <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
+                    <li>Christie, A.: A.B.C. Murders</li>
+                    <li>Christie, A.: Orient Express</li>
+                    <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
+                </ul>
+            </details>
+            <details>
+                <summary>NAJPOGOSTEJE IZPOSOJENE KNJIGE</summary>
+                <ol>
+                    <li>Christie, A.: A.B.C. Murders</li>
+                    <li>Christie, A.: Orient Express</li>
+                    <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
+                    <li>Christie, A.: A.B.C. Murders</li>
+                    <li>Christie, A.: Orient Express</li>
+                    <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
+                    <li>Christie, A.: A.B.C. Murders</li>
+                    <li>Christie, A.: Orient Express</li>
+                    <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
+                    <li>Christie, A.: A.B.C. Murders</li>
+                </ol>
+            </details>
+            <details>
+                <summary>NAJVEČ DODANIH KNJIG</summary>
+                <ol>
+                    <li>Ana Berkopec (52 knjig)</li>
+                    <li>Barbara Berkopec (45 knjig)</li>
+                    <li>Peter Berkopec (30 knjig)</li>
+                    <li>Mojca Berkopec (22 knjig)</li>
+                    <li>Aleš Berkopec (13 knjig)</li>
+                </ol>
+            </details>
         </div>
-        <details>
-            <summary>TRENUTNO IZPOSOJENE KNJIGE</summary>
-            <ul>
-              <li>Christie, A.: A.B.C. Murders</li>
-              <li>Christie, A.: Orient Express</li>
-              <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
-              <li>Christie, A.: A.B.C. Murders</li>
-              <li>Christie, A.: Orient Express</li>
-              <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
-            </ul>
-        </details>
-        <details>
-              <summary>NAJPOGOSTEJE IZPOSOJENE KNJIGE</summary>
-              <ol>
-                  <li>Christie, A.: A.B.C. Murders</li>
-                  <li>Christie, A.: Orient Express</li>
-                  <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
-                  <li>Christie, A.: A.B.C. Murders</li>
-                  <li>Christie, A.: Orient Express</li>
-                  <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
-                  <li>Christie, A.: A.B.C. Murders</li>
-                  <li>Christie, A.: Orient Express</li>
-                  <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
-                  <li>Christie, A.: A.B.C. Murders</li>
-              </ol>
-        </details>
-        <details>
-              <summary>NAJVEČ DODANIH KNJIG</summary>
-              <ol>
-                  <li>Ana Berkopec (52 knjig)</li>
-                  <li>Barbara Berkopec (45 knjig)</li>
-                  <li>Peter Berkopec (30 knjig)</li>
-                  <li>Mojca Berkopec (22 knjig)</li>
-                  <li>Aleš Berkopec (13 knjig)</li>
-              </ol>
-        </details>
     </div>
+    <footer> <a href="admin.html" class="button">admin</a> <b>|</b> <a href="isci.html" class="button">išči</a> <b>|</b> <a href="vrni.html" class="button">vrni</a> <b>|</b> <a href="dodaj.html" class="button">dodaj</a> <b>|</b> <a href="statistika.html" class="button">statistika</a> <b>|</b> <a href="profil.html" class="button">profil</a> <b>|</b> <a href="index.html" class="button" onclick="return odjava()">odjava</a> </footer>
 </body>
 
-<footer>
-    <a href="admin.html" class="button">admin</a>
-    <b>|</b>
-    <a href="isci.html" class="button">išči</a>
-    <b>|</b>
-    <a href="vrni.html" class="button">vrni</a>
-    <b>|</b>
-    <a href="dodaj.html" class="button">dodaj</a>
-    <b>|</b>
-    <a href="statistika.html" class="button">statistika</a>
-    <b>|</b>
-    <a href="profil.html" class="button">profil</a>
-    <b>|</b>
-    <a href="index.html" class="button">odjava</a>
-</footer>
 </html>

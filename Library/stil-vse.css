@@ -11,14 +11,18 @@ img {
     height: 50px;
 }
 
-div #navmenu {
+#navmenu {
     margin-right: 20px;
     padding-top: 32px;
 }
 
-div #gumbi {
+.gumbi {
     text-align: center;
     padding-bottom: 45px;
+}
+
+.gumbi a:hover {
+    color: #66cdaa;
 }
 
 .chosen-button {
@@ -35,10 +39,8 @@ div #gumbi {
 }
 
 .centered {
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 20px;
-    padding-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 header {
@@ -63,43 +65,27 @@ footer {
     left: 0;
 }
 
+footer a:hover,
+#navmenu a:hover {
+    color: white;
+}
+
 .myButton {
-    -moz-box-shadow: 0px 10px 14px -7px #91b8b3;
-    -webkit-box-shadow: 0px 10px 14px -7px #91b8b3;
-    box-shadow: 0px 10px 14px -7px #91b8b3;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #768d87), color-stop(1, #6c7c7c));
-    background: -moz-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-    background: -webkit-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-    background: -o-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-    background: -ms-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-    background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#6c7c7c', GradientType=0);
-    background-color: #768d87;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
+    box-shadow: 0px 10px 14px -7px #768D87;
+    background: linear-gradient(to bottom, #768D87 5%, #6c7c7c 100%);
+    border-radius: 5px;
     border: 1px solid #566963;
     display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 13px;
+    color: white;
     font-weight: bold;
     padding: 6px 12px;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #2b665e;
-    position: center;
+    text-shadow: 1px 2px 0px #2b665e;
+    text-align: center;
 }
 
 .myButton:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #768d87));
-    background: -moz-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
-    background: -webkit-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
-    background: -o-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
-    background: -ms-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
-    background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#768d87', GradientType=0);
-    background-color: #6c7c7c;
+    background: linear-gradient(to bottom, #6c7c7c 5%, #768D87 100%);
 }
 
 .myButton:active {
@@ -107,18 +93,92 @@ footer {
     top: 1px;
 }
 
+.burger,
+.naslov,
+.sidenav {
+    display: none;
+}
 
 @media (max-width: 800px) {
-    footer {
+    footer,
+    .gumbi,
+    .po,
+    #navmenu {
         display: none;
-    }
-    #gumbi{
-        display: none;
-    }
-    .button {
-        padding: 10px 10px 10px 10px;
     }
     body {
         font-size: 80%;
+    }
+    .naslov {
+        display: inline;
+        float: left;
+        font-size: 300%;
+        font-weight: bold;
+        color: black;
+        padding-top: 20px;
+        padding-left: 50px;
+    }
+    .burger {
+        float: right;
+        display: inline-block;
+        font-size: 300%;
+    }
+    .burgerLink {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+        padding: 10px 20px 0px 0px;
+    }
+    header {
+        padding-bottom: 60px;
+    }
+    .sidenav {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: black;
+        transition: 0.3s;
+    }
+    .sidenav a {
+        padding: 8px 0px 8px 8px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s
+    }
+    .sidenav a:hover,
+    .offcanvas a:focus {
+        color: #d1f0e5;
+    }
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        font-size: 36px;
+    }
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 490px) {
+    .naslov {
+        display: none;
+    }
+    .myButton {
+        padding: 3px 6px;
+        text-shadow: 0px 1px 0px #2b665e;
+        box-shadow: 0px 10px 14px -8px #768D87;
+    }
+    .sidenav a {
+        font-size: 18px;
     }
 }

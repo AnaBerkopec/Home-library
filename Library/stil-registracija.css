@@ -1,27 +1,21 @@
 header {
     padding-bottom: 60px;
 }
-.text {
-    height: 40px;
-}
 
 .textfield {
     height: 2em;
     width: 20em;
-    -moz-border-radius:4px;
-	-webkit-border-radius:4px;
-	border-radius:4px;
-	background-color: #d1f0e5;
+    border-radius: 4px;
+    background-color: #d1f0e5;
 }
 
 .space {
     margin-bottom: 15px;
 }
 
-div #reg {
-  text-decoration: underline;
-  color: black;
-  font-size: 80%;
+.prijava {
+    text-decoration: underline;
+    color: black;
 }
 
 h2 {
@@ -30,13 +24,9 @@ h2 {
     margin-bottom: 20px;
 }
 
-div #registr {
+form {
     text-align: right;
     margin-top: 5px;
-}
-
-#registracija #register #form #gumbR {
-   padding-right: 200px;
 }
 
 .marg {
@@ -53,19 +43,14 @@ body {
     margin: 0;
 }
 
-#registracija {
+.registracija {
     height: 90%;
-    display: -webkit-flex;
     display: flex;
-    -webkit-align-items: center;
     align-items: center;
-    -webkit-justify-content: center;
     justify-content: center;
 }
 
-#register {
-    max-width: 800px;
-    min-width: 250px;
+.register {
     padding: 20px 20px 20px 20px;
     background-color: #66cdaa;
     text-align: center;
@@ -73,5 +58,14 @@ body {
 
 #gumb1 {
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 490px) {
+    .textfield {
+        width: 100%;
+    }
+    label {
+        float: left;
+    }
 }
