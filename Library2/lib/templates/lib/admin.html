@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stil/stil-vse.css">
+    <link rel="stylesheet" type="text/css" href="stil/stil-admin.css">
+    <script src="js/js-vse.js"></script>
+    <title>DK | ADMIN</title>
+</head>
+
+<body>
+    <header>
+        <div id="navbar"> <img src="slike/dk-logo.png" alt="dK">
+            <div id="navmenu">
+                <div class="po"> <a href="profil.html" class="button">Profil</a> <b>|</b> <a href="index.html" class="button">Odjava</a> </div>
+            </div>
+            <div class="naslov">
+                <label>ADMIN</label>
+            </div>
+            <div class="burger"> <a class="burgerLink" href="javascript:void(0);" onclick="openNav()">☰</a> </div>
+        </div>
+    </header>
+    <div id="mySidenav" class="sidenav"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <a href="isci.html">IŠČI</a> <a href="vrni.html">VRNI</a> <a href="dodaj.html">DODAJ</a> <a href="statistika.html">STATISTIKA</a> <a href="profil.html">PROFIL</a> <a href="admin.html">ADMIN</a> <a href="index.html">ODJAVA</a> </div>
+    <div class="centered">
+        <div class="gumbi">
+            <h1>
+                <a href="isci.html" class="button">IŠČI</a>
+                <b>|</b>
+                <a href="vrni.html" class="button">VRNI</a>
+                <b>|</b>
+                <a href="dodaj.html" class="button">DODAJ</a>
+                <b>|</b>
+                <a href="statistika.html" class="button">STATISTIKA</a>
+            </h1> </div>
+        <div class="wrapper">
+            <div class="lokacija">
+                <h3>DODAJ LOKACIJO</h3>
+                <form>
+                    <label class="marg">Nadstropje:</label>
+                    <select class="small-dropdown space" title="Nadstropje">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                    <br>
+                    <label>Številka omare: </label>
+                    <input type="text" class="smallTextfield space" name="omara" placeholder="Omara" title="Vpiši številko omare" pattern="[0-9]" required>
+                    <br>
+                    <label>Število polic: </label>
+                    <input type="text" class="smallTextfield space2" name="police" placeholder="Police" title="Vpiši število polic v omari" pattern="[0-9]" required>
+                    <br>
+                    <input type="submit" class=myButton value="DODAJ"> </form>
+            </div>
+            <div class="uporabnik">
+                <h3>POTRDI NOVE UPORABNIKE</h3>
+                <table>
+                    <tr>
+                        <th>Ime</th>
+                        <th>Priimek</th>
+                        <th>E-mail</th>
+                        <th>Telefon</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Helena</td>
+                        <td>Plešnik</td>
+                        <td>helencaaa.p@gmail.com</td>
+                        <td>040439309</td>
+                        <td><a href="#" class="myButton">POTRDI</a></td>
+                    </tr>
+                    <tr>
+                        <td>Klemen</td>
+                        <td>Plešnik</td>
+                        <td>klemen.plesnik@gmail.com</td>
+                        <td>040400309</td>
+                        <td><a href="#" class="myButton">POTRDI</a></td>
+                    </tr>
+                    <tr>
+                        <td>Domen</td>
+                        <td>Plešnik</td>
+                        <td>domen.p@gmail.com</td>
+                        <td>051439309</td>
+                        <td><a href="#" class="myButton">POTRDI</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer> <a href="admin.html" class="button">admin</a> <b>|</b> <a href="isci.html" class="button">išči</a> <b>|</b> <a href="vrni.html" class="button">vrni</a> <b>|</b> <a href="dodaj.html" class="button">dodaj</a> <b>|</b> <a href="statistika.html" class="button">statistika</a> <b>|</b> <a href="profil.html" class="button">profil</a> <b>|</b> <a href="index.html" class="button">odjava</a> </footer>
+</body>
+
+</html>

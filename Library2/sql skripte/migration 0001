@@ -1,0 +1,44 @@
+BEGIN;
+--
+-- Create model Izposojeno
+--
+CREATE TABLE "lib_izposojeno" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "izposoja" datetime NOT NULL, "vracilo" datetime NOT NULL);
+--
+-- Create model Knjiga
+--
+CREATE TABLE "lib_knjiga" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "avtorji" varchar(200) NOT NULL, "naslov" varchar(200) NOT NULL, "dodajalec_id" integer NULL REFERENCES "auth_us
+er" ("id"));
+--
+-- Create model Lokacija
+--
+CREATE TABLE "lib_lokacija" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nadstropje" integer NOT NULL, "omara" integer NOT NULL, "polica" integer NOT NULL);
+--
+-- Add field lokacija to knjiga
+--
+ALTER TABLE "lib_knjiga" RENAME TO "lib_knjiga__old";
+CREATE TABLE "lib_knjiga" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "avtorji" varchar(200) NOT NULL, "naslov" varchar(200) NOT NULL, "dodajalec_id" integer NULL REFERENCES "auth_us
+er" ("id"), "lokacija_id" integer NULL REFERENCES "lib_lokacija" ("id"));
+INSERT INTO "lib_knjiga" ("lokacija_id", "avtorji", "id", "naslov", "dodajalec_id") SELECT NULL, "avtorji", "id", "naslov", "dodajalec_id" FROM "lib_knjiga__old";
+DROP TABLE "lib_knjiga__old";
+CREATE INDEX "lib_knjiga_287e8c11" ON "lib_knjiga" ("dodajalec_id");
+CREATE INDEX "lib_knjiga_d978adcf" ON "lib_knjiga" ("lokacija_id");
+--
+-- Add field knjiga to izposojeno
+--
+ALTER TABLE "lib_izposojeno" RENAME TO "lib_izposojeno__old";
+CREATE TABLE "lib_izposojeno" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "izposoja" datetime NOT NULL, "vracilo" datetime NOT NULL, "knjiga_id" integer NULL REFERENCES "lib_knjiga"
+("id"));
+INSERT INTO "lib_izposojeno" ("izposoja", "vracilo", "id", "knjiga_id") SELECT "izposoja", "vracilo", "id", NULL FROM "lib_izposojeno__old";
+DROP TABLE "lib_izposojeno__old";
+CREATE INDEX "lib_izposojeno_ceee5427" ON "lib_izposojeno" ("knjiga_id");
+--
+-- Add field uporabnik to izposojeno
+--
+ALTER TABLE "lib_izposojeno" RENAME TO "lib_izposojeno__old";
+CREATE TABLE "lib_izposojeno" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "izposoja" datetime NOT NULL, "vracilo" datetime NOT NULL, "knjiga_id" integer NULL REFERENCES "lib_knjiga"
+("id"), "uporabnik_id" integer NULL REFERENCES "auth_user" ("id"));
+INSERT INTO "lib_izposojeno" ("izposoja", "vracilo", "id", "knjiga_id", "uporabnik_id") SELECT "izposoja", "vracilo", "id", "knjiga_id", NULL FROM "lib_izposojeno__old";
+DROP TABLE "lib_izposojeno__old";
+CREATE INDEX "lib_izposojeno_ceee5427" ON "lib_izposojeno" ("knjiga_id");
+CREATE INDEX "lib_izposojeno_f9585d13" ON "lib_izposojeno" ("uporabnik_id");
+COMMIT;

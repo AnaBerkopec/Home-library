@@ -1,0 +1,184 @@
+* {
+    font-family: "Arial", "Verdana", sans-serif;
+    margin: auto;
+}
+
+img {
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+#navmenu {
+    margin-right: 20px;
+    padding-top: 32px;
+}
+
+.gumbi {
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+.gumbi a:hover {
+    color: #66cdaa;
+}
+
+.chosen-button {
+    color: #768d87;
+    text-decoration: underline;
+    padding: 10px 30px 10px 30px;
+    font-weight: bold;
+}
+
+.button {
+    text-decoration: none;
+    color: black;
+    padding: 10px 30px 10px 30px;
+}
+
+.centered {
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+header {
+    text-align: right;
+    background-color: #66cdaa;
+    padding-bottom: 10px;
+}
+
+body {
+    text-align: center;
+    background-color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #768D87;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+footer a:hover,
+#navmenu a:hover {
+    color: white;
+}
+
+.myButton {
+    box-shadow: 0px 10px 14px -7px #768D87;
+    background: linear-gradient(to bottom, #768D87 5%, #6c7c7c 100%);
+    border-radius: 5px;
+    border: 1px solid #566963;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    padding: 6px 12px;
+    text-decoration: none;
+    text-shadow: 1px 2px 0px #2b665e;
+    text-align: center;
+}
+
+.myButton:hover {
+    background: linear-gradient(to bottom, #6c7c7c 5%, #768D87 100%);
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+.burger,
+.naslov,
+.sidenav {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    footer,
+    .gumbi,
+    .po,
+    #navmenu {
+        display: none;
+    }
+    body {
+        font-size: 80%;
+    }
+    .naslov {
+        display: inline;
+        float: left;
+        font-size: 300%;
+        font-weight: bold;
+        color: black;
+        padding-top: 20px;
+        padding-left: 50px;
+    }
+    .burger {
+        float: right;
+        display: inline-block;
+        font-size: 300%;
+    }
+    .burgerLink {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+        padding: 10px 20px 0px 0px;
+    }
+    header {
+        padding-bottom: 60px;
+    }
+    .sidenav {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: black;
+        transition: 0.3s;
+    }
+    .sidenav a {
+        padding: 8px 0px 8px 8px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s
+    }
+    .sidenav a:hover,
+    .offcanvas a:focus {
+        color: #d1f0e5;
+    }
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        font-size: 36px;
+    }
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 490px) {
+    .naslov {
+        display: none;
+    }
+    .myButton {
+        padding: 3px 6px;
+        text-shadow: 0px 1px 0px #2b665e;
+        box-shadow: 0px 10px 14px -8px #768D87;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}

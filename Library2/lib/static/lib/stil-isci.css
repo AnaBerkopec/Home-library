@@ -1,0 +1,62 @@
+table {
+    border-collapse: collapse;
+    width: 80%;
+    transition: 0.3s;
+    margin-top: 30px;
+}
+
+thead {
+    color: #66cdaa;
+}
+
+tfoot td {
+    text-align: center;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #eee
+}
+
+.textfield {
+    height: 2em;
+    width: 50%;
+    border-radius: 4px;
+    background-color: #d1f0e5;
+    transition: 0.3s;
+}
+
+ul.pagination {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+ul.pagination li {
+    display: inline;
+}
+
+ul.pagination li a {
+    color: black;
+    padding: 7px 20px;
+    text-decoration: none;
+}
+
+ul.pagination li a.active {
+    background-color: #66cdaa;
+    color: #eee;
+}
+
+ul.pagination li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+@media (max-width: 490px) {
+    .textfield {
+        width: 80%;
+    }
+}

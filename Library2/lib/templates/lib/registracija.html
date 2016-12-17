@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'lib/stil-vse.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'lib/stil-registracija.css' %}">
+    <script src="{% static 'js/js-registracija.js' %}" type="text/javascript"></script>
+    <script src="js/js-registracija.js"></script>
+    <title>DK | REGISTRACIJA</title>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+            <img src="{% static 'lib/images/dk-logo.png' %}" alt="dK"/>
+        </div>
+    </header>
+    <div class="registracija">
+        <div class="register">
+            <h2>REGISTRACIJA</h2>
+            <form name="registr" action="index.html" onsubmit="return check(this);">
+                <label>Ime:</label>
+                <input type="text" class="textfield space" name="ime" placeholder="Ime" title="Tvoje ime" required>
+                <br>
+                <label class="marg">Priimek:</label>
+                <input type="text" class="textfield space" name="priimek" placeholder="Priimek" title="Tvoj priimek" required>
+                <br>
+                <label class="marg">Uporabniško ime:</label>
+                <input type="text" class="textfield space" name="username1" placeholder="Uporabniško ime" title="Tvoje uporabniško ime" required>
+                <br>
+                <label class="marg">E-mail:</label>
+                <input type="email" class="textfield space" name="mail" placeholder="Email naslov" title="Tvoje email naslov" required>
+                <br>
+                <label class="marg">Telefonska številka:</label>
+                <input type="text" class="textfield space" name="phone" placeholder="Telefonska številka" title="Vpiši samo številke" pattern="[0-9]{9}" required>
+                <br>
+                <label class="marg">Geslo:</label>
+                <input type="password" class="textfield space" name="geslo" id="geslo" placeholder="Geslo" title="Geslo mora imeti vsaj 6 znakov" pattern="^\S{6,}$" required>
+                <br>
+                <label class="marg">Potrdi geslo:</label>
+                <input type="password" class="textfield space" name="geslo2" id="geslo2" placeholder="Ponovi geslo" title="Geslo mora imeti vsaj 6 znakov" pattern="^\S{6,}$" required>
+                <br>
+                <br>
+                <input type="submit" id="gumb1" class=myButton value="REGISTRACIJA">
+                <br>
+                <br> </form> <a href="index.html" class="prijava">Si že registriran? Prijavi se tukaj.</a> </div>
+    </div>
+</body>
+
+</html>

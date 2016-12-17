@@ -1,0 +1,23 @@
+BEGIN;
+--
+-- Alter field nadstropje on lokacija
+--
+ALTER TABLE "lib_lokacija" RENAME TO "lib_lokacija__old";
+CREATE TABLE "lib_lokacija" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nadstropje" integer NOT NULL, "omara" integer NOT NULL, "polica" integer NOT NULL);
+INSERT INTO "lib_lokacija" ("omara", "nadstropje", "id", "polica") SELECT "omara", "nadstropje", "id", "polica" FROM "lib_lokacija__old";
+DROP TABLE "lib_lokacija__old";
+--
+-- Alter field omara on lokacija
+--
+ALTER TABLE "lib_lokacija" RENAME TO "lib_lokacija__old";
+CREATE TABLE "lib_lokacija" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nadstropje" integer NOT NULL, "polica" integer NOT NULL, "omara" integer NOT NULL);
+INSERT INTO "lib_lokacija" ("omara", "nadstropje", "id", "polica") SELECT "omara", "nadstropje", "id", "polica" FROM "lib_lokacija__old";
+DROP TABLE "lib_lokacija__old";
+--
+-- Alter field polica on lokacija
+--
+ALTER TABLE "lib_lokacija" RENAME TO "lib_lokacija__old";
+CREATE TABLE "lib_lokacija" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "nadstropje" integer NOT NULL, "omara" integer NOT NULL, "polica" integer NOT NULL);
+INSERT INTO "lib_lokacija" ("omara", "nadstropje", "id", "polica") SELECT "omara", "nadstropje", "id", "polica" FROM "lib_lokacija__old";
+DROP TABLE "lib_lokacija__old";
+COMMIT;
