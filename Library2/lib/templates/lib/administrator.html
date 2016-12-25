@@ -1,0 +1,63 @@
+{% extends "lib/base.html" %}
+
+{% block scripts %}
+    <link rel="stylesheet" type="text/css" href="/static/lib/stil-administrator.css">
+{% endblock %}
+{% block title %}ADMIN{% endblock %}
+{% block title1 %}ADMIN{% endblock %}
+
+{% block main %}
+<div class="wrapper">
+    <div class="lokacija">
+        <h3>DODAJ LOKACIJO</h3>
+        <form>
+            <label class="marg">Nadstropje:</label>
+            <select class="small-dropdown space" title="Nadstropje">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            <br>
+            <label>Številka omare: </label>
+            <input type="text" class="smallTextfield space" name="omara" placeholder="Omara" title="Vpiši številko omare" pattern="[0-9]" required>
+            <br>
+            <label>Število polic: </label>
+            <input type="text" class="smallTextfield space2" name="police" placeholder="Police" title="Vpiši število polic v omari" pattern="[0-9]" required>
+            <br>
+            <input type="submit" class=myButton value="DODAJ"> </form>
+    </div>
+    <div class="uporabnik">
+        <h3>POTRDI NOVE UPORABNIKE</h3>
+        <table>
+            <tr>
+                <th>Ime</th>
+                <th>Priimek</th>
+                <th>E-mail</th>
+                <th>Telefon</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Helena</td>
+                <td>Plešnik</td>
+                <td>helencaaa.p@gmail.com</td>
+                <td>040439309</td>
+                <td><a href="#" class="myButton">POTRDI</a></td>
+            </tr>
+            <tr>
+                <td>Klemen</td>
+                <td>Plešnik</td>
+                <td>klemen.plesnik@gmail.com</td>
+                <td>040400309</td>
+                <td><a href="#" class="myButton">POTRDI</a></td>
+            </tr>
+            <tr>
+                <td>Domen</td>
+                <td>Plešnik</td>
+                <td>domen.p@gmail.com</td>
+                <td>051439309</td>
+                <td><a href="#" class="myButton">POTRDI</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}

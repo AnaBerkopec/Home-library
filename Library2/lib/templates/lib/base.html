@@ -1,0 +1,73 @@
+{% load static %}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block scripts %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'lib/stil-vse.css' %}">
+    <script src="{% static 'js/js-vse.js' %}" type="text/javascript"></script>
+    <title>DK | {% block title %}Domača knjižnica{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+            <img src="{% static 'lib/images/dk-logo.png' %}" alt="dK"/>
+            <div id="navmenu">
+                <div class="po">
+                    <a href="/profil" class="button">Profil</a>
+                    <b>|</b>
+                    <a href="/prijava" class="button" onclick="return odjava()">Odjava</a>
+                </div>
+            </div>
+            <div class="naslov">
+                <label>{% block title1 %}Domača knjižnica{% endblock %}</label>
+            </div>
+            <div class="burger"> <a class="burgerLink" href="javascript:void(0);" onclick="openNav()">☰</a> </div>
+        </div>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/isci">IŠČI</a>
+        <a href="/vrni">VRNI</a>
+        <a href="/dodaj">DODAJ</a>
+        <a href="/statistika">STATISTIKA</a>
+        <a href="/profil">PROFIL</a>
+        <a href="/administrator">ADMIN</a>
+        <a href="/prijava">ODJAVA</a>
+    </div>
+    <div class="centered">
+        <div class="gumbi">
+            <h1>
+                <a href="/isci" class="button">IŠČI</a> <!-- banned chosen button -->
+                <b>|</b>
+                <a href="/vrni" class="button">VRNI</a>
+                <b>|</b>
+                <a href="/dodaj" class="button">DODAJ</a>
+                <b>|</b>
+                <a href="/statistika" class="button">STATISTIKA</a>
+            </h1> </div>
+
+        <section class="">
+            {% block main %}
+                main block ne dela
+            {% endblock %}
+        </section>
+    </div>
+    <footer>
+        <a href="/administrator" class="button">admin</a>
+        <b>|</b>
+        <a href="/isci" class="button">išči</a>
+        <b>|</b>
+        <a href="/vrni" class="button">vrni</a>
+        <b>|</b>
+        <a href="/dodaj" class="button">dodaj</a>
+        <b>|</b>
+        <a href="/statistika" class="button">statistika</a>
+        <b>|</b>
+        <a href="/profil" class="button">profil</a>
+        <b>|</b>
+        <a href="" class="button" onclick="return odjava()">odjava</a>
+    </footer>
+</body>
+</html>

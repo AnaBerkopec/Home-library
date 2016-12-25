@@ -1,0 +1,28 @@
+BEGIN;
+--
+-- Alter field izposoja on izposojeno
+--
+ALTER TABLE "lib_izposojeno" RENAME TO "lib_izposojeno__old";
+CREATE TABLE "lib_izposojeno" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "izposo
+ja" datetime NOT NULL, "vracilo" datetime NOT NULL, "knjiga_id" integer NULL REFERENCES
+ "lib_knjiga" ("id"), "uporabnik_id" integer NULL REFERENCES "auth_user" ("id"));
+INSERT INTO "lib_izposojeno" ("uporabnik_id", "izposoja", "id", "vracilo", "knjiga_id")
+ SELECT "uporabnik_id", "izposoja", "id", "vracilo", "knjiga_id" FROM "lib_izposojeno__
+old";
+DROP TABLE "lib_izposojeno__old";
+CREATE INDEX "lib_izposojeno_ceee5427" ON "lib_izposojeno" ("knjiga_id");
+CREATE INDEX "lib_izposojeno_f9585d13" ON "lib_izposojeno" ("uporabnik_id");
+--
+-- Alter field vracilo on izposojeno
+--
+ALTER TABLE "lib_izposojeno" RENAME TO "lib_izposojeno__old";
+CREATE TABLE "lib_izposojeno" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "izposo
+ja" datetime NOT NULL, "knjiga_id" integer NULL REFERENCES "lib_knjiga" ("id"), "uporab
+nik_id" integer NULL REFERENCES "auth_user" ("id"), "vracilo" bool NOT NULL);
+INSERT INTO "lib_izposojeno" ("uporabnik_id", "izposoja", "id", "vracilo", "knjiga_id")
+ SELECT "uporabnik_id", "izposoja", "id", "vracilo", "knjiga_id" FROM "lib_izposojeno__
+old";
+DROP TABLE "lib_izposojeno__old";
+CREATE INDEX "lib_izposojeno_ceee5427" ON "lib_izposojeno" ("knjiga_id");
+CREATE INDEX "lib_izposojeno_f9585d13" ON "lib_izposojeno" ("uporabnik_id");
+COMMIT;
