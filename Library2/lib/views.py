@@ -4,13 +4,13 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-
+from django.db.models import Count
 
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.csrf import ensure_csrf_cookie
 
-from .models import Lokacija, Knjiga, Izposojeno
+from .models import Lokacija, Knjiga, Izposojeno, User
 from .forms import LoginForm
 
 
@@ -25,6 +25,7 @@ def prijava(request):
             user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
             if user is not None:
                 login(request, user)
+                return render(request, "lib/isci.html", context)
 
     context['knjige'] = knjige
     context['loginForm'] = LoginForm()
@@ -34,7 +35,7 @@ def prijava(request):
 def registracija(request):
     return render_to_response("lib/registracija.html")
 
-@login_required(login_url="prijava/")
+#@login_required(login_url="prijava/")
 def isci(request):
     context = {}
     knjige = Knjiga.objects.order_by('naslov')[:5]
@@ -43,21 +44,42 @@ def isci(request):
     context['izposojeno'] =  izposojeno
     return render_to_response('lib/isci.html', context)
 
-def izposoja(request, knjiga_id):
+def izposoja(request, knjiga_id): #ne dela se
     context = {}
-    return render_to_response(request, "lib/vrni.html", context) #fake
+    print(request)
+    return render_to_response(request, "lib/isci.html", context)
 
 def vrni(request):
-    return render_to_response("lib/vrni.html")
+    context = {}
+    izposojeno = Izposojeno.objects.order_by('izposoja') #filter
+    context['izposojeno'] = izposojeno
+    return render_to_response("lib/vrni.html", context)
 
 def dodaj(request):
-    return render_to_response("lib/dodaj.html")
+    context = {}
+    lokacije = Lokacija.objects.order_by('nadstropje')
+    context['lokacije'] = lokacije
+    return render_to_response("lib/dodaj.html", context)
 
 def statistika(request):
-    return render_to_response("lib/statistika.html")
+    context = {}
+    izposojeno = Izposojeno.objects.order_by('izposoja')
+    najpogosteje = Izposojeno.objects.annotate(Count('knjiga'))
+    dodane = Knjiga.objects.annotate(Count('dodajalec_id', distinct=True)) #not woring yet
+    context['izposojeno'] = izposojeno
+    context['najpogosteje'] = najpogosteje
+    context['dodane'] = dodane
+    for d in dodane:
+        print(d.dodajalec)
+    return render_to_response("lib/statistika.html", context)
 
 def administrator(request):
     return render_to_response("lib/administrator.html")
 
 def profil(request):
-    return render_to_response("lib/profil.html")
+    context = {}
+    uporabnik = User.objects.order_by('username')
+    context['uporabnik'] = uporabnik
+    for u in uporabnik:
+        print(u)
+    return render_to_response("lib/profil.html", context)

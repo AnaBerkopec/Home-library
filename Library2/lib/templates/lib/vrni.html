@@ -18,31 +18,34 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Christie, Agatha</td>
-            <td>A.B.C. Murders</td>
-            <td>8.9.2016</td>
-            <td>1.5.3</td>
-            <td><a href="#" class="myButton">VRNI</a></td>
-        </tr>
-        <tr>
-            <td>Christie, Agatha</td>
-            <td>Orient Express</td>
-            <td>8.9.2016</td>
-            <td>1.5.3</td>
-            <td><a href="#" class="myButton">VRNI</a></td>
-        </tr>
-        <tr>
-            <td>Rowling, J. K.</td>
-            <td>Harry Potter and the Prisoner of Azkaban</td>
-            <td>15.10.2016</td>
-            <td>1.5.4</td>
-            <td><a href="#" class="myButton">VRNI</a></td>
-        </tr>
+        {% for i in izposojeno %}
+            {% if i.vracilo == False %}
+                <tr>
+                    <td>{{ i.knjiga.avtorji }}</td>
+                    <td>{{ i.knjiga.naslov }}</td>
+                    <td>{{ i.izposoja }}</td>
+                    <td>{{ i.knjiga.lokacija }}</td>
+                    <td>
+                        <form id="vracilo" action={{ i.id }} method="post">
+                            <!-- <input type='hidden' name='csrfmiddlewaretoken' value={% csrf_token %} /> -->
+                            {% csrf_token %}
+                            <input type="hidden" name="vrni" value={{ i.id }} />
+                            <input type="submit" class=myButton value="VRNI">
+                        </form>
+                    </td>
+                </tr>
+            {% endif %}
+        {% endfor %}
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="5"><a href="#" class="myButton">VRNI VSE</a></td>
+            <form id="vrniVse" action="user.id" method="post">
+                <td colspan="5">
+                    <input type="hidden" name="vraciloVseh" value={{ user.id }} />
+                    <input type="submit" class=myButton value="VRNI VSE">
+                </td>
+            </form>
+
         </tr>
     </tfoot>
 </table>

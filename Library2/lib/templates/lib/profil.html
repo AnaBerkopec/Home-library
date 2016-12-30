@@ -12,11 +12,12 @@
 <div class="wrapper">
     <div class=eq>
         <h3>ZAMENJAJ UPORABNIŠKO IME</h3>
-        <form class="menjaj">
+        <form class="menjaj" method="post">
             <label>Novo uporabniško ime:</label>
             <input type="text" class="textfield space2" name="newusername" placeholder="Novo uporabniško ime" title="Uporabniško ime mora biti dolgo vsaj 5 znakov" pattern=".{5,}" required>
             <br>
-            <input type="submit" class=myButton value="ZAMENJAJ UPORABNIŠKO IME"> </form>
+            <input type="submit" class=myButton value="ZAMENJAJ UPORABNIŠKO IME">
+        </form>
     </div>
     <div class="eq">
         <h3>ZAMENJAJ GESLO</h3>
@@ -30,7 +31,8 @@
             <label>Ponovi novo geslo:</label>
             <input type="password" class="textfield space" id="newpassword2" placeholder="Ponovi novo geslo" title="Geslo mora imeti vsaj 6 znakov" pattern="^\S{6,}$" required>
             <br>
-            <input type="submit" class=myButton value="ZAMENJAJ GESLO"> </form>
+            <input type="submit" class=myButton value="ZAMENJAJ GESLO">
+        </form>
     </div>
 </div>
 {% endblock %}

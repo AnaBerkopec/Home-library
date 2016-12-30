@@ -11,37 +11,27 @@
     <div class="eq">
         <h4>Trenutno izposojene knjige</h4>
         <ul>
-            <li>Christie, A.: A.B.C. Murders</li>
-            <li>Christie, A.: Orient Express</li>
-            <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
-            <li>Christie, A.: A.B.C. Murders</li>
-            <li>Christie, A.: Orient Express</li>
-            <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
+            {% for i in izposojeno %}
+                {% if i.vracilo == False %}
+                    <li>{{ i.knjiga }}</li>
+                {% endif %}
+            {% endfor %}
         </ul>
     </div>
     <div class="eq">
         <h4>Najpogosteje izposojene knjige</h4>
         <ol>
-            <li>Christie, A.: A.B.C. Murders</li>
-            <li>Christie, A.: Orient Express</li>
-            <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
-            <li>Christie, A.: A.B.C. Murders</li>
-            <li>Christie, A.: Orient Express</li>
-            <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
-            <li>Christie, A.: A.B.C. Murders</li>
-            <li>Christie, A.: Orient Express</li>
-            <li>Rowling, J. K.: Harry Potter and the Prisoner of Azkaban</li>
-            <li>Christie, A.: A.B.C. Murders</li>
+            {% for n in najpogosteje %}
+                    <li>{{ n.knjiga.avtorji }}: {{ n.knjiga.naslov }}</li>
+            {% endfor %}
         </ol>
     </div>
     <div class="eq">
         <h4>Največ dodanih knjig</h4>
         <ol>
-            <li>Ana Berkopec (52 knjig)</li>
-            <li>Barbara Berkopec (45 knjig)</li>
-            <li>Peter Berkopec (38 knjig)</li>
-            <li>Mojca Berkopec (20 knjig)</li>
-            <li>Aleš Berkopec (14 knjig)</li>
+            {% for d in dodane %}
+                <li> {{ d.dodajalec.username }}  (52 knjig)</li>
+            {% endfor %}
         </ol>
     </div>
 </div>

@@ -8,7 +8,7 @@
 
 {% block main %}
 <div class="dodaj">
-    <form name="novForm">
+    <form name="novForm" method="post">
         <label>Avtor(ji):</label>
         <input type="text" class="textfield space" name="avtorji" placeholder="Ime in priimek avtorja" title="Avtor(ji) knjige" required>
         <br>
@@ -16,27 +16,13 @@
         <input type="text" class="textfield space" name="naslov" placeholder="Naslov" title="Naslov knjige" required>
         <br>
         <label class="marg">Lokacija:</label>
-        <select class="small-dropdown" title="Nadstropje">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-        </select> .
-        <select class="small-dropdown" title="Omara">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select> .
-        <select class="small-dropdown" title="Polica">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
+        <select class="small-dropdown" title="Lokacija">
+            {% for l in lokacije %}
+                <option>{{ l.nadstropje }}.{{ l.omara }}.{{ l.polica }}</option>
+            {% endfor %}
         </select>
         <br>
-        <input type="submit" class=myButton value="DODAJ"> </form>
+        <input type="submit" class=myButton value="DODAJ">
+    </form>
 </div>
 {% endblock %}
