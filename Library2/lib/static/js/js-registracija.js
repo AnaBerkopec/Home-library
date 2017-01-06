@@ -1,8 +1,16 @@
 /*jslint devel: true */
 function check() {
     'use strict';
-    if (document.getElementById('geslo2').value !== document.getElementById('geslo').value) {
+    console.log("check")
+    if (document.getElementById('password1').value !== document.getElementById('password2').value) {
         alert("Gesli se ne ujemata!");
+        return false;
+    }
+    console.log("after if")
+    var x;
+    if (confirm("Ste prepričani da se želite odjaviti?") === true) {
+        return true;
+    } else {
         return false;
     }
 }

@@ -9,8 +9,11 @@
 
 {% block main %}
 <div class="iskanje">
-    <label>Išči: </label>
-    <input type="text" class="textfield" name="niz" placeholder="Vnesi iskani niz">
+    <form action="" method="GET">
+        <label>Išči: </label>
+        <input type="text" class="textfield" name="niz" placeholder="Vnesi iskani niz">
+        <input type="submit" value="Search" style="display:none"/>
+    </form>
 </div>
 <div>
     <table>
@@ -28,20 +31,18 @@
                    <td>{{ k.avtorji }}</td>
                    <td>{{ k.naslov }}</td>
                    <td>{{ k.lokacija }}</td>
-                    {% for i in izposojeno %}
-                        {% if i.knjiga.naslov == k.naslov %}
-                            <td>izposojeno: {{ i.izposoja|date:"d. m. Y"  }}, {{ i.uporabnik.username }}</td>
-                        {% else %}
-                            <td>
-                                <form id="izposoja" action={{ k.id }} method="post">
-                                    <!-- <input type='hidden' name='csrfmiddlewaretoken' value={% csrf_token %} /> -->
-                                    {% csrf_token %}
-                                    <input type="hidden" name="knjiga" value={{ k.id }} />
-                                    <input type="submit" class=myButton value="IZPOSODI SI">
-                                </form>
-                            </td>
-                        {% endif %}
-                    {% endfor %}
+                    {% if not k.izposoje.get or k.izposoje.get.vracilo %}
+                        <td>
+                            <form id="izposoja" action={{ k.id }} method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="knjiga" value={{ k.id }} />
+                                <input type="submit" class=myButton value="IZPOSODI SI">
+                            </form>
+                        </td>
+                    {% else %}
+                        <td>izposojeno: {{ k.izposoje.get.izposoja|date:"d. m. Y"  }},
+                            {{ k.izposoje.get.uporabnik.username }}</td>
+                    {% endif %}
                 </tr>
             {% endfor %}
         </tbody>

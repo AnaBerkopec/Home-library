@@ -22,7 +22,7 @@
         <h4>Najpogosteje izposojene knjige</h4>
         <ol>
             {% for n in najpogosteje %}
-                    <li>{{ n.knjiga.avtorji }}: {{ n.knjiga.naslov }}</li>
+                    <li>{{ n.avtorji }}: {{ n.naslov }}</li>
             {% endfor %}
         </ol>
     </div>

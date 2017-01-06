@@ -9,19 +9,8 @@
 {% block main %}
 <div class="dodaj">
     <form name="novForm" method="post">
-        <label>Avtor(ji):</label>
-        <input type="text" class="textfield space" name="avtorji" placeholder="Ime in priimek avtorja" title="Avtor(ji) knjige" required>
-        <br>
-        <label class="marg"> Naslov:</label>
-        <input type="text" class="textfield space" name="naslov" placeholder="Naslov" title="Naslov knjige" required>
-        <br>
-        <label class="marg">Lokacija:</label>
-        <select class="small-dropdown" title="Lokacija">
-            {% for l in lokacije %}
-                <option>{{ l.nadstropje }}.{{ l.omara }}.{{ l.polica }}</option>
-            {% endfor %}
-        </select>
-        <br>
+        {% csrf_token %}
+        {{ form.as_p }}
         <input type="submit" class=myButton value="DODAJ">
     </form>
 </div>

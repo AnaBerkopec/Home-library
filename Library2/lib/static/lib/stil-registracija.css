@@ -4,9 +4,11 @@ header {
 
 .textfield {
     height: 2em;
-    width: 20em;
+    width: 100%;
     border-radius: 4px;
     background-color: #d1f0e5;
+    margin-bottom: 20px;
+    margin-top: 5px;
 }
 
 .space {
@@ -25,7 +27,7 @@ h2 {
 }
 
 form {
-    text-align: right;
+    text-align: center;
     margin-top: 5px;
 }
 

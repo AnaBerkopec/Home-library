@@ -27,7 +27,6 @@
                     <td>{{ i.knjiga.lokacija }}</td>
                     <td>
                         <form id="vracilo" action={{ i.id }} method="post">
-                            <!-- <input type='hidden' name='csrfmiddlewaretoken' value={% csrf_token %} /> -->
                             {% csrf_token %}
                             <input type="hidden" name="vrni" value={{ i.id }} />
                             <input type="submit" class=myButton value="VRNI">
@@ -39,7 +38,8 @@
     </tbody>
     <tfoot>
         <tr>
-            <form id="vrniVse" action="user.id" method="post">
+            <form id="vrniVse" action="vse" method="post">
+                {% csrf_token %}
                 <td colspan="5">
                     <input type="hidden" name="vraciloVseh" value={{ user.id }} />
                     <input type="submit" class=myButton value="VRNI VSE">

@@ -9,3 +9,7 @@ function izposoja() {
     }
     document.getElementById("demo").innerHTML = x;
 }
+
+function isci() {
+
+}

@@ -1,8 +1,7 @@
 from __future__ import unicode_literals
-
+from django.utils import timezone
 from django.db import models
 from django.contrib.auth.models import User
-from datetime import datetime
 
 class Lokacija(models.Model):
     nadstropje = models.IntegerField()
@@ -24,9 +23,9 @@ class Knjiga(models.Model):
 
 
 class Izposojeno(models.Model):
-    knjiga = models.ForeignKey(Knjiga, on_delete=models.SET_NULL, null=True)
+    knjiga = models.ForeignKey(Knjiga, on_delete=models.SET_NULL, null=True, related_name='izposoje')
     uporabnik = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    izposoja = models.DateTimeField(default=datetime.now) #default=datetime.now
+    izposoja = models.DateTimeField(default=timezone.now) #default=datetime.now
     vracilo = models.BooleanField(default=False)
 
     def __str__(self):
