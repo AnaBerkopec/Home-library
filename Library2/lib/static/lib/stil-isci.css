@@ -31,27 +31,27 @@ tr:nth-child(even) {
     transition: 0.3s;
 }
 
-ul.pagination {
+pagination {
     display: inline-block;
     margin-top: 15px;
 }
 
-ul.pagination li {
+pagination li {
     display: inline;
 }
 
-ul.pagination li a {
+pagination li a {
     color: black;
     padding: 7px 20px;
     text-decoration: none;
 }
 
-ul.pagination li a.active {
+pagination li a.active {
     background-color: #66cdaa;
     color: #eee;
 }
 
-ul.pagination li a:hover:not(.active) {
+pagination li a:hover:not(.active) {
     background-color: #ddd;
 }
 

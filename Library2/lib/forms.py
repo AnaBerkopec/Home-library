@@ -7,7 +7,6 @@ class LoginForm(forms.Form):
   username = forms.CharField(label='Uporabniško ime:', max_length=100, widget=forms.TextInput(attrs={'class' : 'textfield'}))
   password = forms.CharField(label='Geslo', max_length=100, widget=forms.PasswordInput(attrs={'class' : 'textfield'}))
 
-
 #registracija
 class RegistrationForm(forms.Form):
   first_name = forms.CharField(label='Ime:', max_length=100, widget=forms.TextInput(attrs={'class' : 'textfield'}))
@@ -40,6 +39,35 @@ class DodajForm(forms.ModelForm):
     class Meta:
         model = Knjiga
         fields = ['avtorji', 'naslov', 'lokacija']
-    #avtorji = forms.CharField(label='Avtorji:', max_length=100, widget=forms.TextInput(attrs={'class': 'textfield'}))
-    #naslov = forms.CharField(label='Naslov:', max_length=100, widget=forms.TextInput(attrs={'class': 'textfield'}))
-    #lokacija = forms.ChoiceField(label='Lokacija:', choices=[ l for l in Lokacija.objects.all() ], widget=forms.Select(attrs={'class' : 'textfield'}))
+
+
+#profil
+class MenjajUsername(forms.Form):
+    new_username = forms.CharField(label='Novo uporabniško ime:', max_length=100,
+                                   widget=forms.TextInput(attrs={'class' : 'textfield'}))
+
+    def clean_username(self):
+        print("clean username")
+        username = self.cleaned_data['new_username']
+        if User.objects.filter(username=username).exists():
+            raise forms.ValidationError("To uporabniško ime že obstaja.")
+        return username
+
+#profil
+class MenjajGeslo(forms.Form):
+    password1 = forms.CharField(required=True, max_length=30, widget=forms.PasswordInput(attrs={'class' : 'textfield'}),
+                              label="Novo geslo:")
+    password2 = forms.CharField(required=True, max_length=30, widget=forms.PasswordInput(attrs={'class' : 'textfield'}),
+                              label="Ponovi geslo:")
+
+    def clean(self):
+        if 'password1' in self.cleaned_data and 'password2' in self.cleaned_data:
+            if self.cleaned_data['password1'] != self.cleaned_data['password2']:
+                raise forms.ValidationError("Gesli se ne ujemata.")
+        return self.cleaned_data
+
+#administrator
+class AdminForm(forms.ModelForm):
+    class Meta:
+        model = Lokacija
+        fields = ['nadstropje', 'omara', 'polica']

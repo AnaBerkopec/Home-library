@@ -21,11 +21,25 @@ class Knjiga(models.Model):
     def __str__(self):
         return self.avtorji + ': ' + self.naslov
 
+    def pritlicje(self):
+        if self.lokacija.nadstropje == 0:
+            return True
+        return False
+
+    def podstreha(self):
+        if self.lokacija.nadstropje == 3:
+            return True
+        return False
+
+    def vecAvtorjev(self):
+        if len(self.avtorji.split()) > 3:
+            return True
+        return False
 
 class Izposojeno(models.Model):
     knjiga = models.ForeignKey(Knjiga, on_delete=models.SET_NULL, null=True, related_name='izposoje')
     uporabnik = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    izposoja = models.DateTimeField(default=timezone.now) #default=datetime.now
+    izposoja = models.DateTimeField(default=timezone.now, blank=True)
     vracilo = models.BooleanField(default=False)
 
     def __str__(self):

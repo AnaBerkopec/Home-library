@@ -8,31 +8,26 @@
 {% block title1 %}PROFIL{% endblock %}
 
 {% block main %}
-<h2> ANA BERKOPEC </h2>
+<h2> {{ uporabnik.username }} </h2>
 <div class="wrapper">
     <div class=eq>
         <h3>ZAMENJAJ UPORABNIŠKO IME</h3>
-        <form class="menjaj" method="post">
-            <label>Novo uporabniško ime:</label>
-            <input type="text" class="textfield space2" name="newusername" placeholder="Novo uporabniško ime" title="Uporabniško ime mora biti dolgo vsaj 5 znakov" pattern=".{5,}" required>
+        <form action="u" class="menjaj" method="post">
+            {% csrf_token %}
+            {{ menjajUsername.as_p }}
             <br>
             <input type="submit" class=myButton value="ZAMENJAJ UPORABNIŠKO IME">
         </form>
+        {{ form.errors }}
     </div>
     <div class="eq">
         <h3>ZAMENJAJ GESLO</h3>
-        <form onsubmit="return check(this);" class="menjaj" method="post">
-            <label>Sedanje geslo:</label>
-            <input type="password" class="textfield space" id="oldpassword" placeholder="Staro geslo" title="Geslo mora imeti vsaj 6 znakov" pattern="^\S{6,}$" required>
-            <br>
-            <label>Novo geslo:</label>
-            <input type="password" class="textfield space" id="newpassword1" placeholder="Novo geslo" title="Geslo mora imeti vsaj 6 znakov" pattern="^\S{6,}$" required>
-            <br>
-            <label>Ponovi novo geslo:</label>
-            <input type="password" class="textfield space" id="newpassword2" placeholder="Ponovi novo geslo" title="Geslo mora imeti vsaj 6 znakov" pattern="^\S{6,}$" required>
-            <br>
+        <form action="g" class="menjaj" method="post">
+            {% csrf_token %}
+            {{ menjajGeslo.as_p }}
             <input type="submit" class=myButton value="ZAMENJAJ GESLO">
         </form>
+        {{ form.errors }}
     </div>
 </div>
 {% endblock %}

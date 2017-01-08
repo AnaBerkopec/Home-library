@@ -16,44 +16,55 @@
     </form>
 </div>
 <div>
-    <table>
-        <thead>
-            <tr>
-                <th>AVTORJI</th>
-                <th>NASLOV</th>
-                <th>LOKACIJA</th>
-                <th>STATUS</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for k in knjige %}
+    {% if knjige %}
+        <table>
+            <thead>
                 <tr>
-                   <td>{{ k.avtorji }}</td>
-                   <td>{{ k.naslov }}</td>
-                   <td>{{ k.lokacija }}</td>
-                    {% if not k.izposoje.get or k.izposoje.get.vracilo %}
-                        <td>
-                            <form id="izposoja" action={{ k.id }} method="post">
-                                {% csrf_token %}
-                                <input type="hidden" name="knjiga" value={{ k.id }} />
-                                <input type="submit" class=myButton value="IZPOSODI SI">
-                            </form>
-                        </td>
-                    {% else %}
-                        <td>izposojeno: {{ k.izposoje.get.izposoja|date:"d. m. Y"  }},
-                            {{ k.izposoje.get.uporabnik.username }}</td>
-                    {% endif %}
+                    <th>AVTORJI</th>
+                    <th>NASLOV</th>
+                    <th>LOKACIJA</th>
+                    <th>STATUS</th>
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
-<div class="strani-tabele">
-    <ul class="pagination">
-        <li><a href="isci.html">«</a></li>
-        <li><a class="active" href="isci.html">1</a></li>
-        <li><a href="isci2.html">2</a></li>
-        <li><a href="isci2.html">»</a></li>
-    </ul>
+            </thead>
+            <tbody>
+                {% for k in knjige %}
+                    <tr>
+                       <td>{{ k.avtorji }}</td>
+                       <td>{{ k.naslov }}</td>
+                       <td>{{ k.lokacija }}</td>
+                        {% if not k.izposoje.get or k.izposoje.get.vracilo %}
+                            <td>
+                                <form id="izposoja" action={{ k.id }} method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="knjiga" value={{ k.id }} />
+                                    <input type="submit" class=myButton value="IZPOSODI SI">
+                                </form>
+                            </td>
+                        {% else %}
+                            <td>izposojeno: {{ k.izposoje.get.izposoja|date:"d. m. Y"  }},
+                                {{ k.izposoje.get.uporabnik.username }}</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% if is_paginated %}
+            <div class="pagination">
+                <span class="page-links">
+                    {% if page_obj.has_previous %}
+                        <a href="/isci?page={{ page_obj.previous_page_number }}">previous</a>
+                    {% endif %}
+                    <span class="page-current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+                    {% if page_obj.has_next %}
+                        <a href="/isci?page={{ page_obj.next_page_number }}">next</a>
+                    {% endif %}
+                </span>
+            </div>
+        {% endif %}
+    {% else %}
+        <p>Taka knjiga ne obstaja.</p>
+    {% endif %}
 </div>
 {% endblock %}
