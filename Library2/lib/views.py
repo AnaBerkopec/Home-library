@@ -6,12 +6,12 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth import authenticate, login, logout
 from .models import Lokacija, Knjiga, Izposojeno, User
 from .forms import LoginForm, RegistrationForm, MenjajUsername, MenjajGeslo
-import operator
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView
 from django.urls import reverse_lazy
 from django.contrib.auth.models import Group
-
+from django.db.models import Q
+import operator
 
 def prijava(request):
     if request.user.is_authenticated:
@@ -58,13 +58,15 @@ def registracija(request):
 @method_decorator(login_required(login_url="/prijava/"), name='dispatch')
 class IsciKnjige(ListView):
     model = Knjiga
+    def get_queryset(self):
+        queryset = Knjiga.objects.all()
+        if self.request.GET.get('niz', ''):
+            niz = self.request.GET.get('niz')
+            queryset = Knjiga.objects.filter(Q(avtorji__icontains=niz) | Q(naslov__icontains=niz))
+        return queryset
     template_name = "lib/isci.html"
     context_object_name = "knjige"
     paginate_by = 5
-
-def isciFilter(request, niz):
-    print(niz)
-    return HttpResponseRedirect(redirect_to=("/vrni/"))
 
 @login_required(login_url="/prijava/")
 def iskanje(request, niz):
@@ -80,9 +82,14 @@ def iskanje(request, niz):
 def izposoja(request, knjiga_id):
     k = Knjiga.objects.get(pk=knjiga_id)
     izposoja1 = Izposojeno(knjiga=k, uporabnik=request.user, vracilo=False)
-    print(izposoja1.izposoja)
     izposoja1.save()
     return HttpResponseRedirect(redirect_to=("/isci/"))
+
+@method_decorator(login_required(login_url="/prijava/"), name='dispatch')
+class VrniKnjige(ListView):
+    model = Izposojeno
+    template_name = "lib/vrni.html"
+    context_object_name = "izposojeno"
 
 @login_required(login_url="/prijava/")
 def vrni(request):
@@ -154,10 +161,8 @@ def statistika(request):
     context['dodane'] = dodane
     return render(request, "lib/statistika.html", context)
 
-#@method_decorator(login_required(login_url="/isci/"), name='dispatch')
-#class LokacijaDodaj(views.LoginRequiredMixin, views.PermissionRequiredMixin,CreateView):
+@method_decorator(permission_required('lib.add_lokacija'), name='dispatch') #("lib.add_lokacija"), name='LokacijaDodaj.dispatch')
 class LokacijaDodaj(CreateView):
-    permission_required = "Lokacacija.can_add"
     template_name = 'lib/administrator.html'
     model = Lokacija
     fields =  ['nadstropje', 'omara', 'polica']

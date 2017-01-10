@@ -33,7 +33,9 @@
         <a href="/dodaj">DODAJ</a>
         <a href="/statistika">STATISTIKA</a>
         <a href="/profil">PROFIL</a>
+        {% if user.is_superuser %}
         <a href="/administrator">ADMIN</a>
+        {% endif %}
         <a href="/odjava">ODJAVA</a>
     </div>
     <div class="centered">
@@ -55,8 +57,10 @@
         </section>
     </div>
     <footer>
-        <a href="/administrator" class="button">admin</a>
-        <b>|</b>
+        {% if user.is_superuser %}
+            <a href="/administrator" class="button">admin</a>
+            <b>|</b>
+        {% endif %}
         <a href="/isci" class="button">išči</a>
         <b>|</b>
         <a href="/vrni" class="button">vrni</a>

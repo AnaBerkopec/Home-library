@@ -32,7 +32,7 @@
                        <td>{{ k.avtorji }}</td>
                        <td>{{ k.naslov }}</td>
                        <td>{{ k.lokacija }}</td>
-                        {% if not k.izposoje.get or k.izposoje.get.vracilo %}
+                        {% if k.niIzposojena %}
                             <td>
                                 <form id="izposoja" action={{ k.id }} method="post">
                                     {% csrf_token %}
@@ -41,8 +41,8 @@
                                 </form>
                             </td>
                         {% else %}
-                            <td>izposojeno: {{ k.izposoje.get.izposoja|date:"d. m. Y"  }},
-                                {{ k.izposoje.get.uporabnik.username }}</td>
+                            <td>izposojeno: {{ k.izposojenaKnjiga.izposoja|date:"d. m. Y"  }},
+                                {{ k.izposojenaKnjiga.uporabnik.username }}</td>
                         {% endif %}
                     </tr>
                 {% endfor %}

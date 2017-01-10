@@ -19,7 +19,7 @@
     </thead>
     <tbody>
         {% for i in izposojeno %}
-            {% if i.vracilo == False %}
+            {% if i.vracilo == False and i.uporabnik == user %}
                 <tr>
                     <td>{{ i.knjiga.avtorji }}</td>
                     <td>{{ i.knjiga.naslov }}</td>

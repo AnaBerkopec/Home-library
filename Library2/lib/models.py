@@ -21,18 +21,18 @@ class Knjiga(models.Model):
     def __str__(self):
         return self.avtorji + ': ' + self.naslov
 
+    def niIzposojena(self):
+        i = Izposojeno.objects.filter(knjiga=self).order_by('-izposoja')
+        if i and i[0].vracilo == False:
+            return False
+        return True
+
+    def izposojenaKnjiga(self):
+        return Izposojeno.objects.filter(knjiga=self).order_by('-izposoja')[0]
+
+
     def pritlicje(self):
         if self.lokacija.nadstropje == 0:
-            return True
-        return False
-
-    def podstreha(self):
-        if self.lokacija.nadstropje == 3:
-            return True
-        return False
-
-    def vecAvtorjev(self):
-        if len(self.avtorji.split()) > 3:
             return True
         return False
 
