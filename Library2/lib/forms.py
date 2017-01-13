@@ -47,7 +47,6 @@ class MenjajUsername(forms.Form):
                                    widget=forms.TextInput(attrs={'class' : 'textfield'}))
 
     def clean_username(self):
-        print("clean username")
         username = self.cleaned_data['new_username']
         if User.objects.filter(username=username).exists():
             raise forms.ValidationError("To uporabniško ime že obstaja.")

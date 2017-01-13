@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import permission_required
 from django.utils.decorators import method_decorator
 from django.contrib.auth import authenticate, login, logout
 from .models import Lokacija, Knjiga, Izposojeno, User
 from .forms import LoginForm, RegistrationForm, MenjajUsername, MenjajGeslo
 from django.views.generic import ListView
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 from django.contrib.auth.models import Group
 from django.db.models import Q
@@ -31,7 +31,6 @@ def prijava(request):
 def odjava(request):
   logout(request)
   return HttpResponseRedirect(redirect_to=("/prijava/"))
-
 
 def registracija(request):
     if request.user.is_authenticated:
@@ -115,7 +114,7 @@ def vrniVse(request):
         print(v.vracilo)
     return HttpResponseRedirect(redirect_to=("/isci/"))
 
-@method_decorator(login_required(login_url="/prijava/"), name='dispatch')
+@method_decorator(permission_required('lib.add_knjiga'), name='dispatch')
 class KnjigaDodaj(CreateView):
     template_name = 'lib/dodaj.html'
     model = Knjiga
@@ -139,7 +138,7 @@ def statistika(request):
     najpogosteje = []
     for stevec, key in enumerate(sorted(n.items(), key=operator.itemgetter(1), reverse=True)):
         najpogosteje.append(key[0])
-        if stevec >= 9:
+        if stevec > 9:
             break
 
     dodaneKnjige = Knjiga.objects.order_by('dodajalec')
@@ -161,7 +160,7 @@ def statistika(request):
     context['dodane'] = dodane
     return render(request, "lib/statistika.html", context)
 
-@method_decorator(permission_required('lib.add_lokacija'), name='dispatch') #("lib.add_lokacija"), name='LokacijaDodaj.dispatch')
+@method_decorator(permission_required('lib.add_lokacija'), name='dispatch')
 class LokacijaDodaj(CreateView):
     template_name = 'lib/administrator.html'
     model = Lokacija
@@ -174,7 +173,6 @@ def profil(request):
     context = {}
     context['menjajUsername'] = MenjajUsername()
     context['menjajGeslo'] = MenjajGeslo()
-    print(request.user)
     context['uporabnik'] = request.user
     return render(request, "lib/profil.html", context)
 

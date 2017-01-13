@@ -4,11 +4,17 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Lokacija(models.Model):
+    """Class representing the location of the book
+
+    This class represents blablabla...
+    """
     nadstropje = models.IntegerField()
     omara = models.IntegerField()
     polica = models.IntegerField()
 
     def __str__(self):
+        """String representation of the location. This function...
+        """
         return str(self.nadstropje) + '.' + str(self.omara) + '.' + str(self.polica)
 
 

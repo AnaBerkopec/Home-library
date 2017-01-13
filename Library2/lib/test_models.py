@@ -25,7 +25,6 @@ class KnjigaTests(TestCase):
         """
         knjiga1 = Knjiga.objects.create(avtorji='avtor1', naslov='test1')
         izposojeno1 = Izposojeno.objects.create(knjiga=knjiga1, vracilo=False)
-        print(Izposojeno.objects)
         self.assertIs(knjiga1.izposojenaKnjiga().pk, izposojeno1.pk)
 
     def test_pritlicje(self):
