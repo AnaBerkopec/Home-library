@@ -1,0 +1,125 @@
+REGISTRACIJA
+============
+
+Če še niste prijavljeni, lahko ob prihodu na spletno stran izberete povezavo do registracijskega obrazca.
+Izpolnite naslenja vnosna polja:
+
+* Ime - vpišete svoje ime
+* Priimek - vpišete svoj priimek
+* Uporabniško ime - izberete si uporabniško ime. Če je že nekdo pred vami izbral isto uporabniško ime,
+  se vam bo izpisalo opozorilo, ki vas bo na to opozorilo. V tem primeru si izberite drugo uporabniško ime.
+* Email naslov - tukaj vpišete svoj email naslov. Tu se vam lahko pojavi opozorilo, če vpišete neveljavno obliko naslova.
+* Geslo - izberete si geslo, ki ga boste uporabljali za vpis v aplikacijo.
+* Ponovi geslo - ponovno vnesite geslo, ki ste si ga izbrali
+
+Nato le še kliknete na gumb 'REGISTRACIJA'. Če ste vsa polja izpolnili v skladu z zahtevami se bo registracija
+uspešno izvedla, aplikacija pa vas bo preusmerila na prijavo.
+
+Na dnu strani je tudi povezava, ki vam omogoča vrnitev na stran za prijavo, na katero se lahko vrnete, če ste že registrirani
+in imate potrebne podatke za prijavo.
+
+PRIJAVA
+=======
+
+Če ste že eden izmed registriranih uporabnikov, lahko v vnosni polji vnesete svoje izbrano uporabniško ime in geslo.
+Če vas aplikacija po kliku gumba 'PRIJAVA' preusmeri na drugo stran je bila prijava uspešna, sicer pa ste narobe vnesli
+uporabniško ime ali geslo.
+
+Na dnu strani se nahaja povezava, ki vam preusmeri na stran za registracijo, kjer se lahko registrirate,
+če aplikacijo uporabljate prvič.
+
+IŠČI
+====
+
+Vse knjige so dostopne že samo s pregledom osnovne tabele, ter premikanjem po njenih straneh z uporabo povezav na dnu
+tabele, ki vam omogoča premikanje po straneh tabele. V tretjem stolpcu je zapisana lokacija knjige s tremi zaporednimi
+številkami, ki predstavljajo:
+* nadstropje
+* omara
+* polica
+Knjiga, ki ima lokacijo 1.2.3, se torej nahaja v 1. nadstropju, v 2. omari in na 3. polici.
+
+ISKANJE KNJIGE
+--------------
+
+V primeru, da želite iskati knjigo glede na naslov ali avtorja, pa lahko uporabite vnosno polje na vrhu strani.
+Niz, ki ga boste iskali, se lahko nahaja v imenu ali priimku avtorjev, lahko pa tudi v naslovu. Iskanje sprožite s
+pritiskom tipke Enter. V tabeli bodo nato ostale le še knjige, ki ustrezajo vašemu iskanemu nizu. Če pa nobena knjiga
+ne ustreza vašemu iskanemu nizu, pa tabela izgine in se namesto nje izpiše, da taka knjiga ne obstaja. V prvotno stanje
+se lahko vrnete s klikom na 'IŠČI' na vrhu strani, ali pa ponovnim pritiskom tipke Enter pri praznem vnosnem polju.
+
+IZPOSOJA KNJIGE
+---------------
+
+Na strani, ki omogoča iskanje po knjigah, je omogočena tudi izposoja knjig. Ko najdete željeno knjigo si jo lahko
+izposodite tako, da kliknete na gumb 'IZPOSODI SI' v zadnjem stolpcu vrstice z želeno knjigo. Če gumba v tisti vrstici
+ni, to pomeni, da je knjiga izposojena. Namesto gumba lahko vidite uporabniško ime uporabnika, ki si je knjigo izposodil,
+ter datum izposoje. Takoj ko si knjigo izposodite, bo v tabeli izginil gumb, ki omogoča izposojo, ter se bodo izpisale
+podrobnosti o izposoji.
+
+Seznam trenutno izposojenih knjig in najpogosteje izposojenih knjig si lahko ogledate na strani STATISTIKA.
+
+VRNI
+====
+
+Ta stran aplikacije vam omogoča vračilo izposojenih knjig. Če v tabeli ni izpisana nobena knjiga, to pomeni, da ste
+vse morebitne izposojene knjige že vrnili. Sicer pa v tabli vidite seznam knjig, ki ste si jih izposodili, skupaj z
+datumom in uro izposoje, ter lokacijo, na katero je potrebno knjigo ob vračilu dati.
+
+Če želite vrniti samo nekatere izmed izposojenih knjig lahko to storite s klikom na gumb 'VRNI', ki se nahaja na koncu
+vsake vrstice v tabeli. Če pa želite vrniti vse knjige, ki jih imate trenutno izposojene, pa lahko kliknete na gumb
+'VRNI VSE', s katerim lahko naenkrat vrnete vse knjige.
+
+Po kliku na kateregakoli izmed teh gumbov se tabela spremeni, torej iz seznama izginejo knjige, ki ste jih vrnili in
+ostajajo samo še tiste, ki so še vedno izposojene.
+
+
+DODAJ
+=====
+
+Stran dodaj vam omogoča dodajanje nove knjige. Ob dodajanju je potrebno izpolniti vsa tri polja.
+* Avtorji - v to vnosno polje vpišete imena in priimke avtorjev s celimi imeni. Če je avtorjev več, naštejte vse, ter
+jih ločite z vejicami.
+* Naslov - v to vnosno polje vpišete naslov knjige, ki jo želite dodati
+* Lokacija - iz seznama lokacij izberite, kje se knjiga nahaja. Kaj pomeni posamezna številka je razloženo v poglavju
+IŠČI.
+Ko izpolnete vsa polja, lahko s klikom gumba 'DODAJ' dodate knjigo. Aplikacija vas bo nato preusmerila na stran za
+iskanje po knjigah. Statistiko dodajanja knjig pa si lahko ogledate na strani STATISTIKA.
+
+STATISTIKA
+==========
+
+Na tej strani si lahko ogledate nekatere statistične podatke o aplikaciji.
+* TRENUTNO IZPOSOJENE KNJIGE - Na tem seznamu lahko vidite, avtorje in naslove knjig, ki so trenutno izposojene.
+* NAJPOGOSTEJE IZPOSOJENE KNJIGE - Na tem seznamu je izpisanih prvih 10 najpogosteje izposojenih knjig, kjer morda
+lahko dobite idejo za naslednjo knjigo, ki jo želite prebrati.
+* NAJVEČ DODANIH KNJIG - Tu je lestvica največ 10 uporabnikov, kjer je na prvem mestu uporabnik z največ dodanimi
+knjigami, nato pa v padajočem vrstnem redu še ostali. Vidite lahko uporabniško ime, ter v oklepaju število knjig, ki
+jih je posamezen uporabnik dodal.
+
+PROFIL
+======
+
+Ta stran vam omogoča menjanje uporabniškega imena, ter gesla. Na vrhu pa se izpiše vaše uporabniško ime.
+
+ZAMENJAJ UPORABNIŠKO IME
+------------------------
+
+V vnosno polje vpišete novo izbrano uporabniško ime. Aplikacija vas bo opozorila v primeru, da je vaše novo izbrano
+geslo že nekdo uporablja. V tem primeru si izberite drugo uporabniško ime.
+S klikom na gumb 'ZAMENJAJ UPORABNIŠKO IME' tudi izvedete menjavo. Aplikacija vas bo nato preusmerila na stran za iskanje
+po knjigah, kjer lahko nadaljujete z iskanjem in izposojo knjig.
+
+ZAMENJAJ GESLO
+--------------
+
+Predel Zamenjaj geslo vam omogoča menjavo gesla. Zaradi večje varnosti ga je potrebno vnesti dvakrat. Če novo geslo ni
+vneseno identično v obe vnosni polji, vas bo aplikacija opozorila na napako. Ob kliku na gumb 'ZAMENJAJ GESLO' se ob
+pravilno vnešenih ponovitvah gesla vaše geslo zamenja, aplikacija pa vas preusmeri na stran za prijavo, kjer se
+vpišete s svojim uporabniškim imenom in novim geslom.
+
+ODJAVA
+======
+
+Odjavite se lahko s klikom na gumb 'ODJAVA'. Pojavilo se bo opozorilo, ki vas bo vprašalo, če se res želite odjaviti.
+Če odgovorite potrdilno, se boste iz aplikacije odjavili in vrnili na začetno stran, ki vam omogoča ponovno prijavo.

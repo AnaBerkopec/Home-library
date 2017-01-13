@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DOMAČA KNJIŽNICA &#8212; Library2 2017 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2017',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Abecedni seznam" href="genindex.html" />
+    <link rel="search" title="Išči" href="search.html" />
+    <link rel="prev" title="Welcome to Library2’s documentation!" href="user_guide.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="domaca-knjiznica">
+<h1>DOMAČA KNJIŽNICA<a class="headerlink" href="#domaca-knjiznica" title="Povezava na naslov">¶</a></h1>
+<p>Spletna stran omogoča registracijo, prijavo, izpis knjig, ter iskanje, izposojo, vračilo in dodajanje novih knjig.
+Možen je tudi ogled nekaterih statističnih podatkov, menjava uporabniškega imena in gesla, ter dodajanje lokacije
+za administratorja.</p>
+</div>
+<div class="section" id="registracija">
+<h1>REGISTRACIJA<a class="headerlink" href="#registracija" title="Povezava na naslov">¶</a></h1>
+<p>Če še niste prijavljeni, lahko ob prihodu na spletno stran izberete povezavo do registracijskega obrazca.
+Izpolnite naslenja vnosna polja:</p>
+<ul class="simple">
+<li>Ime - vpišete svoje ime</li>
+<li>Priimek - vpišete svoj priimek</li>
+<li>Uporabniško ime - izberete si uporabniško ime. Če je že nekdo pred vami izbral isto uporabniško ime,
+se vam bo izpisalo besedilo, ki vas bo na to opozorilo. V tem primeru si izberite drugo uporabniško ime.</li>
+<li>Email naslov - tukaj vpišete svoj email naslov. Tu se vam lahko pojavi opozorilo, če vpišete neveljavno obliko naslova.</li>
+<li>Geslo - izberete si geslo, ki ga boste uporabljali za vpis v aplikacijo.</li>
+<li>Ponovi geslo - ponovno vnesite geslo, ki ste si ga izbrali</li>
+</ul>
+<p>Nato le še kliknete na gumb &#8216;REGISTRACIJA&#8217;. Če ste vsa polja izpolnili v skladu z zahtevami se bo registracija
+uspešno izvedla, aplikacija pa vas bo preusmerila na prijavo.</p>
+<p>Na dnu strani je tudi povezava, ki vam omogoča vrnitev na stran za prijavo, na katero se lahko vrnete, če ste že registrirani
+in imate potrebne podatke za prijavo.</p>
+</div>
+<div class="section" id="prijava">
+<h1>PRIJAVA<a class="headerlink" href="#prijava" title="Povezava na naslov">¶</a></h1>
+<p>Če ste že eden izmed registriranih uporabnikov, lahko v vnosni polji vnesete svoje izbrano uporabniško ime in geslo.
+Če vas aplikacija po kliku gumba &#8216;PRIJAVA&#8217; preusmeri na drugo stran je bila prijava uspešna, sicer pa ste narobe vnesli
+uporabniško ime ali geslo.</p>
+<p>Na dnu strani se nahaja povezava, ki vam preusmeri na stran za registracijo, kjer se lahko registrirate,
+če aplikacijo uporabljate prvič.</p>
+</div>
+<div class="section" id="isci">
+<h1>IŠČI<a class="headerlink" href="#isci" title="Povezava na naslov">¶</a></h1>
+<p>Vse knjige so dostopne že samo s pregledom osnovne tabele, ter premikanjem po njenih straneh z uporabo povezav na dnu
+tabele. V tabeli so trije stolpci. V prvem so navedeni avtorji knjige, v drugi naslov, v tretjem stolpcu pa je
+zapisana lokacija knjige s tremi zaporednimi številkami, ki predstavljajo:</p>
+<ul class="simple">
+<li>nadstropje</li>
+<li>omara</li>
+<li>polica</li>
+</ul>
+<p>Knjiga, ki ima lokacijo 1.2.3, se torej nahaja v 1. nadstropju, v 2. omari in na 3. polici.</p>
+<p>V zadnjem stolpcu pa je viden status knjige. Če je viden gumb, si je knjigo možno izposoditi, sicer so namesto gumba
+izpisani nekateri podatki o izposoji.</p>
+<div class="section" id="iskanje-knjige">
+<h2>ISKANJE KNJIGE<a class="headerlink" href="#iskanje-knjige" title="Povezava na naslov">¶</a></h2>
+<p>V primeru, da želite iskati knjigo glede na naslov ali avtorja, lahko uporabite vnosno polje na vrhu strani.
+Niz, ki ga boste iskali, se lahko nahaja v imenu ali priimku avtorjev, lahko pa tudi v naslovu. Iskanje sprožite s
+pritiskom tipke Enter. V tabeli bodo nato ostale le še knjige, ki ustrezajo vašemu iskanemu nizu. Če pa nobena knjiga
+ne ustreza danemu nizu, pa tabela izgine in se namesto nje izpiše, da taka knjiga ne obstaja. V prvotno stanje
+se lahko vrnete s klikom na &#8216;IŠČI&#8217; na vrhu strani, ali pa ponovnim pritiskom tipke Enter pri praznem vnosnem polju.</p>
+</div>
+<div class="section" id="izposoja-knjige">
+<h2>IZPOSOJA KNJIGE<a class="headerlink" href="#izposoja-knjige" title="Povezava na naslov">¶</a></h2>
+<p>Na strani, ki omogoča iskanje po knjigah, je omogočena tudi izposoja knjig. Ko najdete željeno knjigo si jo lahko
+izposodite tako, da kliknete na gumb &#8216;IZPOSODI SI&#8217; v zadnjem stolpcu vrstice z želeno knjigo. Če gumba v tisti vrstici
+ni, to pomeni, da je knjiga izposojena. Namesto gumba lahko vidite uporabniško ime uporabnika, ki si je knjigo izposodil,
+ter datum izposoje. Takoj, ko si knjigo izposodite, bo v tabeli izginil gumb, ki omogoča izposojo, ter se bodo izpisale
+podrobnosti o izposoji.</p>
+<p>Seznam trenutno izposojenih knjig in najpogosteje izposojenih knjig si lahko ogledate na strani STATISTIKA.</p>
+</div>
+</div>
+<div class="section" id="vrni">
+<h1>VRNI<a class="headerlink" href="#vrni" title="Povezava na naslov">¶</a></h1>
+<p>Ta stran aplikacije vam omogoča vračilo izposojenih knjig. Če v tabeli ni izpisana nobena knjiga, to pomeni, da ste
+vse morebitne izposojene knjige že vrnili. Sicer pa v tabli vidite seznam knjig, ki ste si jih izposodili, skupaj z
+datumom in uro izposoje, ter lokacijo, na katero je potrebno knjigo ob vračilu vrniti.</p>
+<p>Če želite vrniti samo nekatere izmed izposojenih knjig lahko to storite s klikom na gumb &#8216;VRNI&#8217;, ki se nahaja na koncu
+vsake vrstice v tabeli. Po kliku na kateregakoli izmed teh gumbov se tabela spremeni, torej iz seznama izginejo
+knjige, ki ste jih vrnili in ostajajo samo še tiste, ki so še vedno izposojene.
+Če pa želite naenkrat vrniti vse knjige, ki jih imate trenutno izposojene, pa lahko kliknete na gumb
+&#8216;VRNI VSE&#8217;. Po uspešni vrnitvi vseh knjig, vas bo aplikacija preusmerila na stran za iskanje in izposojo knjig.</p>
+</div>
+<div class="section" id="dodaj">
+<h1>DODAJ<a class="headerlink" href="#dodaj" title="Povezava na naslov">¶</a></h1>
+<p>Stran DODAJ vam omogoča dodajanje nove knjige. Ob dodajanju je potrebno izpolniti vsa tri polja,
+ki se pojavijo na strani.</p>
+<ul class="simple">
+<li>Avtorji - v to vnosno polje vpišete imena in priimke avtorjev s celimi imeni; če je avtorjev več, naštejte vse, ter jih ločite z vejicami</li>
+<li>Naslov - v to vnosno polje vpišete naslov knjige, ki jo želite dodati</li>
+<li>Lokacija - iz seznama lokacij izberite, kje se knjiga nahaja; kaj pomeni posamezna številka je razloženo v poglavju IŠČI.</li>
+</ul>
+<p>Ko izpolnete vsa polja, lahko s klikom gumba &#8216;DODAJ&#8217; dodate knjigo. Aplikacija vas bo nato preusmerila na stran za
+iskanje po knjigah. Statistiko dodajanja knjig pa si lahko ogledate na strani STATISTIKA.</p>
+</div>
+<div class="section" id="statistika">
+<h1>STATISTIKA<a class="headerlink" href="#statistika" title="Povezava na naslov">¶</a></h1>
+<p>Na tej strani si lahko ogledate nekatere statistične podatke o spletni strani.</p>
+<ul class="simple">
+<li>TRENUTNO IZPOSOJENE KNJIGE - Na tem seznamu lahko vidite, avtorje in naslove knjig, ki so trenutno izposojene</li>
+<li>NAJPOGOSTEJE IZPOSOJENE KNJIGE - Na tem seznamu je izpisanih prvih 10 najpogosteje izposojenih knjig, kjer morda lahko dobite idejo za naslednjo knjigo, ki jo želite prebrati</li>
+<li>NAJVEČ DODANIH KNJIG - Tu je lestvica največ 10 uporabnikov, kjer je na prvem mestu uporabnik, ki je dodal največ knjig, nato pa v padajočem vrstnem redu še ostali; vidite lahko uporabniško ime, ter v oklepaju število knjig, ki jih je posamezen uporabnik dodal</li>
+</ul>
+</div>
+<div class="section" id="profil">
+<h1>PROFIL<a class="headerlink" href="#profil" title="Povezava na naslov">¶</a></h1>
+<p>Ta stran vam omogoča menjanje uporabniškega imena, ter gesla. Na vrhu pa se izpiše vaše uporabniško ime.</p>
+<div class="section" id="zamenjaj-uporabnisko-ime">
+<h2>ZAMENJAJ UPORABNIŠKO IME<a class="headerlink" href="#zamenjaj-uporabnisko-ime" title="Povezava na naslov">¶</a></h2>
+<p>V vnosno polje vpišete novo izbrano uporabniško ime. Aplikacija vas bo opozorila v primeru, da je vaše novo izbrano
+geslo že nekdo uporablja. V tem primeru si izberite drugo uporabniško ime.
+S klikom na gumb &#8216;ZAMENJAJ UPORABNIŠKO IME&#8217; tudi izvedete menjavo. Aplikacija vas bo nato preusmerila na stran za iskanje
+po knjigah, kjer lahko nadaljujete z iskanjem in izposojo knjig.</p>
+</div>
+<div class="section" id="zamenjaj-geslo">
+<h2>ZAMENJAJ GESLO<a class="headerlink" href="#zamenjaj-geslo" title="Povezava na naslov">¶</a></h2>
+<p>Predel Zamenjaj geslo vam omogoča menjavo gesla. Zaradi večje varnosti ga je potrebno vnesti dvakrat. Če novo geslo ni
+vneseno identično v obe vnosni polji, vas bo aplikacija opozorila na napako. Ob kliku na gumb &#8216;ZAMENJAJ GESLO&#8217; se ob
+pravilno vnešenih ponovitvah gesla vaše geslo zamenja, aplikacija pa vas preusmeri na stran za prijavo, kjer se
+vpišete s svojim uporabniškim imenom in novim geslom.</p>
+</div>
+</div>
+<div class="section" id="odjava">
+<h1>ODJAVA<a class="headerlink" href="#odjava" title="Povezava na naslov">¶</a></h1>
+<p>Odjavite se lahko s klikom na gumb &#8216;ODJAVA&#8217;. Pojavilo se bo opozorilo, ki vas bo vprašalo, če se res želite odjaviti.
+Če odgovorite potrdilno, se boste iz aplikacije odjavili in vrnili na začetno stran, ki vam omogoča ponovno prijavo.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="user_guide.html">Seznam Vsebine</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">DOMAČA KNJIŽNICA</a></li>
+<li><a class="reference internal" href="#registracija">REGISTRACIJA</a></li>
+<li><a class="reference internal" href="#prijava">PRIJAVA</a></li>
+<li><a class="reference internal" href="#isci">IŠČI</a><ul>
+<li><a class="reference internal" href="#iskanje-knjige">ISKANJE KNJIGE</a></li>
+<li><a class="reference internal" href="#izposoja-knjige">IZPOSOJA KNJIGE</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vrni">VRNI</a></li>
+<li><a class="reference internal" href="#dodaj">DODAJ</a></li>
+<li><a class="reference internal" href="#statistika">STATISTIKA</a></li>
+<li><a class="reference internal" href="#profil">PROFIL</a><ul>
+<li><a class="reference internal" href="#zamenjaj-uporabnisko-ime">ZAMENJAJ UPORABNIŠKO IME</a></li>
+<li><a class="reference internal" href="#zamenjaj-geslo">ZAMENJAJ GESLO</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#odjava">ODJAVA</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="user_guide.html">Documentation overview</a><ul>
+      <li>Previous: <a href="user_guide.html" title="prejšnje poglavje">Welcome to Library2&#8217;s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Trenutna stran</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/lib.rst.txt"
+            rel="nofollow">Prikaži izvorno kodo</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Hitro iskanje</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Potrdi" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Ana.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/lib.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
